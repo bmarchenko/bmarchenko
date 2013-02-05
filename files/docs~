@@ -40,20 +40,3 @@ req = urllib2.Request(url, urllib.urlencode(params), http_header)
 res = opener.open(req)
 print res.read()
 cook = urllib.urlopen('http://booking.uz.gov.ua/').info().headers       
-
-
-var jqxhr = $.getJSON("http://www.pz.gov.ua/rezerv/aj_stations.php?jsoncallback=?",
-{
-format:"json"
-
-}, function(data) {
-alert("success");
-})
-.success(function() { alert("second success"); })
-.error(function(data) { console.log(data); })
-.complete(function() { alert("complete"); });
-// perform other work here ...
-// Set another completion function for the request above
-jqxhr.complete(function(){ alert("second complete"); });
-
-
