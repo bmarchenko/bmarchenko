@@ -12,7 +12,6 @@ class Migration(SchemaMigration):
         db.create_table('search_station', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('f_name', self.gf('django.db.models.fields.CharField')(max_length=300)),
-            ('nom', self.gf('django.db.models.fields.IntegerField')()),
         ))
         db.send_create_signal('search', ['Station'])
 
@@ -26,8 +25,7 @@ class Migration(SchemaMigration):
         'search.station': {
             'Meta': {'object_name': 'Station'},
             'f_name': ('django.db.models.fields.CharField', [], {'max_length': '300'}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'nom': ('django.db.models.fields.IntegerField', [], {})
+            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'})
         }
     }
 
