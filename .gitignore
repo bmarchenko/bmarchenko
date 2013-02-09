@@ -1,4 +1,4 @@
 tickets_db
 *.pyc
 *~py
-
+local_settings.py

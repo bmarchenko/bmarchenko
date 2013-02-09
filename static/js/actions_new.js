@@ -665,27 +665,27 @@ $(document).ready(function(){
 		}
 
 
-		$("#date").datepicker({
-			dateFormat:	'dd-mm-yy',
-			dayNames:	['Âîñêðåñåíüå', 'Ïîíåäåëüíèê', 'Âòîðíèê', 'Ñðåäà', '×åòâåðã', 'Ïÿòíèöà', 'Ñóááîòà'],
-			dayNamesMin:['Âñ', 'Ïí', 'Âò', 'Ñð', '×ò', 'Ïò', 'Ñá'],
-			firstDay:	1,
-			maxDate:	'+44',
-			minDate:	'',
-			monthNames:	[	'ßíâàðü', 'Ôåâðàëü', 'Ìàðò', 'Àïðåëü', 'Ìàé', 'Èþíü',
-							'Èþëü', 'Àâãóñò', 'Ñåíòÿáðü', 'Îêòÿáðü', 'Íîÿáðü', 'Äåêàáðü	'],
-			buttonImage: 'rezerv/img/calendar.jpg',
-			buttonImageOnly: true,
-			buttonText: 'Âûáðàòü',
-			duration: 'fast',
-			showOptions: {direction: 'up'},
-			showOn: 'button',
-			defaultDate: +1,
-			hideIfNoPrevNext: true,
-			gotoCurrent: true
-		});
+    $("#date").datepicker({
+        dateFormat: 'dd-mm-yy',
+        dayNames: ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четвер', "П'ятниця", 'Субота'],
+        dayNamesMin:['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+        firstDay: 1,
+        maxDate: '+44',
+        minDate: '',
+        monthNames: [ 'Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень',
+            'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
+        buttonImage: 'rezerv/img/calendar.jpg',
+        buttonImageOnly: true,
+        buttonText: 'Вибрати',
+        duration: 'fast',
+        showOptions: {direction: 'up'},
+        showOn: 'button',
+        defaultDate: +1,
+        hideIfNoPrevNext: true,
+        gotoCurrent: true
+    });
 
-		function initFields(){
+    function initFields(){
 			$('#stan1, #stan2, #date, #numstan1, #numstan2').val('');
 			$('#stan1').focus();
 			$('#date').datepicker('setDate', +3);
@@ -840,25 +840,24 @@ $(document).ready(function(){
 //    	</table>
 
 
-		$('#mesta').click(function(){
 
-			$("#gXXparams > #params").empty();
-			$("#gXXparams > #gXXzag > div").text('ÍÀËÈ×ÈÅ ÑÂÎÁÎÄÍÛÕ ÌÅÑÒ:');
-			$("#gXXparams > #params").append('<tr><td class="r">Îòïðàâëåíèå:</td><td class="l"><span class="orange" id="timeOtpr"></span><span id="g60stotpr">'+$("#stan1").val()+'</span></td><tr>');
-			$("#gXXparams > #params").append('<tr><td class="r">Ïðèáûòèå:</td><td class="l"><span class="orange" id="timePrib"></span><span id="g60stprib">'+$("#stan2").val()+'</span></td><tr>');
-			$("#gXXparams > #params").append('<tr><td class="r">Äàòà îòïðàâëåíèÿ:</td><td class="l"><span id="g60date">'+$("#date").val()+'</span></td><tr>');
-			$("#gXXparams > #verniteVvod").html('<input id="backToEnter" type="button" value="Èçìåíèòü äàííûå" title="Èçìåíèòü äàííûå" >');
-			//$("#g60stotpr").text($("#stan1").val());
-			//$("#g60stprib").text($("#stan2").val());
-			//$("#g60date").text($("#date").val());
-			$("#enterForm").hide();
-			$("#gXXparams").fadeIn(500);
+    $('#mesta').click(function(){
+        $("#gXXparams > #params").empty();
+        $("#gXXparams > #gXXzag > div").text('НАЯВНІСТЬ ВІЛЬНИХ МІСЦЬ:');
+        $("#gXXparams > #params").append('<tr><td class="r">Відправлення:</td><td class="l"><span class="orange" id="timeOtpr"></span><span id="g60stotpr">'+$("#stan1").val()+'</span></td><tr>');
+        $("#gXXparams > #params").append('<tr><td class="r">Прибуття:</td><td class="l"><span class="orange" id="timePrib"></span><span id="g60stprib">'+$("#stan2").val()+'</span></td><tr>');
+        $("#gXXparams > #params").append('<tr><td class="r">Дата відправлення:</td><td class="l"><span id="g60date">'+$("#date").val()+'</span></td><tr>');
+        $("#gXXparams > #verniteVvod").html('<input id="backToEnter" type="button" value="Змінити дані" title="Змінити дані" >');
+//$("#g60stotpr").text($("#stan1").val());
+//$("#g60stprib").text($("#stan2").val());
+//$("#g60date").text($("#date").val());
+        $("#enterForm").hide();
+        $("#gXXparams").fadeIn(500);
+        $('#backToEnter').click(function(){
+            init_1st_form();
+        })
 
-			$('#backToEnter').click(function(){
-				init_1st_form();
-			})
-
-			g60("kstotpr="+$('#numstan1').val()+"&kstprib="+$('#numstan2').val()+"&sdate="+$('#date').val());
+        g60("kstotpr="+$('#numstan1').val()+"&kstprib="+$('#numstan2').val()+"&sdate="+$('#date').val());
 
 		})
 
