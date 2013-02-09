@@ -1,4 +1,4 @@
-#!/usr/bin/eval PYTHONPATH=/home/mon_compte/modules python
+#!/usr/bin/eval PYTHONPATH=/home/sms-tickets/modules python
 import os, sys
 
 _PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
