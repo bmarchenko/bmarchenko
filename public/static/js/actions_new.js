@@ -231,7 +231,7 @@ function zakaz_load(zakaz_id){
                                         minDate: '-14y',
                                         monthNames: [ 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
                                             'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь '],
-                                        buttonImage: 'rezerv/img/calendar.jpg',
+                                        buttonImage: '/static/images/calendar.jpg',
                                         buttonImageOnly: true,
                                         buttonText: 'Выбрать',
                                         duration: 'fast',
@@ -674,7 +674,7 @@ $(document).ready(function(){
         minDate: '',
         monthNames: [ 'Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень',
             'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
-        buttonImage: 'rezerv/img/calendar.jpg',
+        buttonImage: '/static/images/calendar.jpg',
         buttonImageOnly: true,
         buttonText: 'Вибрати',
         duration: 'fast',
@@ -752,8 +752,8 @@ $(document).ready(function(){
 			})
 
 			function onAjaxSuccess(data)	{
-                console.log(data)
-
+                var ru = data.pop()
+                console.log(ru['ru'])
                 var cnt = $.makeArray(data).length;
 				var stan = ''
 				var nom = '';
@@ -761,8 +761,11 @@ $(document).ready(function(){
 				$('#sel'+txt).empty().attr('size', cnt);
 
 				$.each(data, function(i, station){
+                    if (ru['ru'])
+                        stan=station.name_ru
+                    else
+                        stan=station.name_ukr
 
-					stan=station.name_ukr;
 					nom=station.id;
 
 

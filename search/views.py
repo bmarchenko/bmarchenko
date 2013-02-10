@@ -19,9 +19,10 @@ class FilterView(View):
         if not stations:
             stations =  Station.objects.filter(name_ru__startswith=query)
             ru = True
-
-
-        return HttpResponse(json.dumps(list(stations.values())), content_type='application/json')
+        stations = list(stations.values())
+        stations.append({'ru':ru})
+#        import ipdb; ipdb.set_trace()
+        return HttpResponse(json.dumps(stations), content_type='application/json')
 
 
 class GetTrainsView(View):
