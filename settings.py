@@ -15,13 +15,13 @@ MEDIA_ROOT = os.path.join(PUBLIC_DIR, "media")
 MEDIA_URL = "/media/"
 ADMIN_MEDIA_PREFIX="/static/admin/"
 
-STATIC_ROOT = os.path.join(PUBLIC_DIR, 'static')
+STATIC_ROOT = os.path.join(PUBLIC_DIR, 'static-root')
 STATIC_URL = '/static/'   # TODO: tweak this on staging to test with cloudfront CND
 ADMIN_TOOLS_MEDIA_URL = "/static/"
 TIME_ZONE = 'America/Chicago'
 from imp import find_module
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_PATH, 'static'),
+    os.path.join(PUBLIC_DIR, 'static'),
     )
 
 # Language code for this installation. All choices can be found here:
@@ -80,7 +80,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'south',
+#    'south',
     'search',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
