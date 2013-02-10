@@ -13,10 +13,13 @@ import urllib2, urllib
 
 class FilterView(View):
     def get(self, data):
+        ru = None
         query = data.GET.get('stan').upper()
-        stations =  Station.objects.filter(f_name__startswith=query)
+        stations =  Station.objects.filter(name_ukr__startswith=query)
+        if not stations:
+            stations =  Station.objects.filter(name_ru__startswith=query)
+            ru = True
 
-#        import ipdb; ipdb.set_trace()
 
         return HttpResponse(json.dumps(list(stations.values())), content_type='application/json')
 

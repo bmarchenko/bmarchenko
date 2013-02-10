@@ -752,7 +752,9 @@ $(document).ready(function(){
 			})
 
 			function onAjaxSuccess(data)	{
-				var cnt = $.makeArray(data).length;
+                console.log(data)
+
+                var cnt = $.makeArray(data).length;
 				var stan = ''
 				var nom = '';
 
@@ -760,10 +762,11 @@ $(document).ready(function(){
 
 				$.each(data, function(i, station){
 
-					stan=station.f_name;
+					stan=station.name_ukr;
 					nom=station.id;
 
-					ddd = $('<option>').attr('value', nom).append(stan);
+
+                    ddd = $('<option>').attr('value', nom).append(stan);
 					if (i==0){$('#num'+txt).val(nom); ddd.attr('selected', 'true');}
 
 					ddd.appendTo('#sel'+txt)
