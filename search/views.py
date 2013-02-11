@@ -2,7 +2,7 @@
 from django.views.generic import View, TemplateView, DetailView
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from celery import task
-
+from search.forms import QueryForm
 try:
     import json
 except ImportError:
@@ -12,6 +12,22 @@ from django.core.serializers import serialize
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.shortcuts import redirect
 import urllib2, urllib
+
+@task(default_retry_delay=3 * 60)
+def get_trains(data):
+    res = urllib2.urlopen('http://www.pz.gov.ua/rezerv/aj_g60.php', urllib.urlencode(data['query'])).read()
+    ticket_types = data['ticket_types']
+    if res == data:
+        return get_trains.retry(exc='no change in tickets')
+    else:
+        return (res, data)
+
+class HomeView(View):
+    template='stations.html'
+    def get(self):
+        form = QueryForm()
+    def post(self):
+        pass
 
 class FilterView(View):
     def get(self, data):
@@ -38,11 +54,3 @@ class GetTrainsView(View):
         return HttpResponse(u, content_type='application/json')
 
 
-@task(default_retry_delay=3 * 60)
-def get_trains(data):
-    res = urllib2.urlopen('http://www.pz.gov.ua/rezerv/aj_g60.php', urllib.urlencode(data['query'])).read()
-    ticket_types = data['ticket_types']
-    if res == data:
-        return get_trains.retry(exc='no change in tickets')
-    else:
-        return (res, data)

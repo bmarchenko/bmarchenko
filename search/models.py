@@ -6,3 +6,13 @@ class Station(models.Model):
 
     def __unicode__(self):
         return self.name_ukr
+
+
+class Query(models.Model):
+    phone = models.IntegerField(blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    query = models.CharField(max_length=1000)
+    attempts = models.IntegerField(blank=True, null=True)
+
+    def __unicode__(self):
+        return self.query

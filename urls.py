@@ -8,7 +8,7 @@ from search.views import *
 urlpatterns = patterns('',
 
     # Examples:
-    url(r'^$', direct_to_template, dict(template='stations.html'), name='home'),
+    url(r'^$', HomeView.as_view(), {}, name='home'),
     url(r'get-stations', FilterView.as_view(), {}, name='get_stations'),
     url(r'get-trains', GetTrainsView.as_view(), {}, name='get_trains'),
     # url(r'^tickets/', include('tickets.foo.urls')),
