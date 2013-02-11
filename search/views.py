@@ -1,6 +1,8 @@
 # Create your views here.
 from django.views.generic import View, TemplateView, DetailView
 from django.http import HttpResponse, HttpResponseRedirect, Http404
+from celery import task
+
 try:
     import json
 except ImportError:
@@ -26,7 +28,6 @@ class FilterView(View):
 
 
 class GetTrainsView(View):
-    @csrf_exempt
     def post(self, data):
         query = data.POST
 #        stations =  Station.objects.filter(f_name__startswith=query)
@@ -35,3 +36,13 @@ class GetTrainsView(View):
 
 #        import ipdb; ipdb.set_trace()
         return HttpResponse(u, content_type='application/json')
+
+
+@task(default_retry_delay=3 * 60)
+def get_trains(data):
+    res = urllib2.urlopen('http://www.pz.gov.ua/rezerv/aj_g60.php', urllib.urlencode(data['query'])).read()
+    ticket_types = data['ticket_types']
+    if res == data:
+        return get_trains.retry(exc='no change in tickets')
+    else:
+        return (res, data)

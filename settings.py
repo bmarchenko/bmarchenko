@@ -82,6 +82,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 #    'south',
     'search',
+    'djcelery',
+    'django_extensions',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -111,6 +113,9 @@ LOGGING = {
     }
 }
 
+import djcelery
+djcelery.setup_loader()
+CELERY_IMPORTS = ("search.views", )
 
 try:
     from local_settings import *
