@@ -23,12 +23,15 @@ function g60(zapros){
         beforeSend: function(){
             before();
             $("#otv60").empty();
-            $("#wait #descwait").text("Запрос наличия мест...");
+            $("#wait #descwait").text("Запит наявності місць...");
             $("#wait").fadeIn(500);
         },
         complete: function(){
             $("#wait #descwait").empty();
             $("#wait").hide();
+            $('#sms-query-form').fadeIn(1000);
+            console.log(zapros);
+            $('#id_query').val(zapros);
         },
         error : function(XMLHttpRequest, textStatus, errorThrown){
             addMessages({'error':['Получен неверный формат данных. Повторите запрос.']});
@@ -857,8 +860,9 @@ $(document).ready(function(){
 //$("#g60stotpr").text($("#stan1").val());
 //$("#g60stprib").text($("#stan2").val());
 //$("#g60date").text($("#date").val());
-        $("#enterForm").hide();
+        $("#enterForm").hide()
         $("#gXXparams").fadeIn(500);
+
         $('#backToEnter').click(function(){
             init_1st_form();
         })

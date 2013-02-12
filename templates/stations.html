@@ -79,14 +79,15 @@ var lid = 1;
     		<div id="timeout">
 				Запрос будет выполнен через <span class="stan">0</span> сек.
     		</div>
-            <h3>Прислати повідомлення коли з'являться нові квитки?</h3>
-            <form id="sms-query-form">
+            <form id="sms-query-form" method='POST' style="display: none">
+                <h3>Прислати повідомлення коли з'являться нові квитки?</h3>
+                {{ form.query }}
                 {{ form.platzcart }}  Плацкарт<br>
                 {{ form.kype }} Купе<br>
                 введіть телефон:<br>
-            {{ form.phone }}<br>
+                {{ form.phone }}<br>
                 або email:<br>
-            {{ form.email }}<br>
+                {{ form.email }}<br>
                 <input type="submit" value="Зберегти" title="Зберегти" >
             </form>
         </div>
