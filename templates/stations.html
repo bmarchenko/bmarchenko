@@ -58,7 +58,7 @@ var lid = 1;
                 			<input type="text" id="date" class="round" >
     
     						<div id="knopki" class="round">
-    							<input id="mesta" type="button" value="Наличие мест" title="Наличие мест" > 
+    							<input id="mesta" type="button" value="Наявність місць" title="Наявність місць" >
         						<!--input id="rasp" type="button" value="Расписание" title="Расписание"--> 
     						</div>
     
@@ -79,8 +79,17 @@ var lid = 1;
     		<div id="timeout">
 				Запрос будет выполнен через <span class="stan">0</span> сек.
     		</div>
-
- 		</div>
+            <h3>Прислати повідомлення коли з'являться нові квитки?</h3>
+            <form id="sms-query-form">
+                {{ form.platzcart }}  Плацкарт<br>
+                {{ form.kype }} Купе<br>
+                введіть телефон:<br>
+            {{ form.phone }}<br>
+                або email:<br>
+            {{ form.email }}<br>
+                <input type="submit" value="Зберегти" title="Зберегти" >
+            </form>
+        </div>
     </div>
     
 </BODY>

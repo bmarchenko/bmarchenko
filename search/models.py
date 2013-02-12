@@ -9,6 +9,8 @@ class Station(models.Model):
 
 
 class Query(models.Model):
+    kype = models.BooleanField(default=True)
+    platzcart = models.BooleanField(default=True)
     phone = models.IntegerField(blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     query = models.CharField(max_length=1000)

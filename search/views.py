@@ -12,6 +12,7 @@ from django.core.serializers import serialize
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.shortcuts import redirect
 import urllib2, urllib
+from django.views.generic.edit import FormView
 
 @task(default_retry_delay=3 * 60)
 def get_trains(data):
@@ -22,12 +23,18 @@ def get_trains(data):
     else:
         return (res, data)
 
-class HomeView(View):
-    template='stations.html'
-    def get(self):
-        form = QueryForm()
-    def post(self):
-        pass
+
+class IndexView(FormView):
+    template_name = 'stations.html'
+    form_class = QueryForm
+    success_url = '/thanks/'
+
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+#        form.send_email()
+        return super(IndexView, self).form_valid(form)
+
 
 class FilterView(View):
     def get(self, data):
