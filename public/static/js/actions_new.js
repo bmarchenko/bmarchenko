@@ -30,7 +30,6 @@ function g60(zapros){
             $("#wait #descwait").empty();
             $("#wait").hide();
             $('#sms-query-form').fadeIn(1000);
-            console.log(zapros);
             $('#id_query').val(zapros);
         },
         error : function(XMLHttpRequest, textStatus, errorThrown){

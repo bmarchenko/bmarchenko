@@ -3,6 +3,7 @@ from django.views.generic import View, TemplateView, DetailView
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from celery import task
 from search.forms import QueryForm
+from django.core.mail import send_mail
 try:
     import json
 except ImportError:
@@ -13,16 +14,7 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.shortcuts import redirect
 import urllib2, urllib
 from django.views.generic.edit import FormView
-
-@task(default_retry_delay=3 * 60)
-def get_trains(data):
-    res = urllib2.urlopen('http://www.pz.gov.ua/rezerv/aj_g60.php', urllib.urlencode(data['query'])).read()
-    ticket_types = data['ticket_types']
-    if res == data:
-        return get_trains.retry(exc='no change in tickets')
-    else:
-        return (res, data)
-
+from search.tasks import get_trains
 
 class IndexView(FormView):
     template_name = 'stations.html'
@@ -30,6 +22,7 @@ class IndexView(FormView):
     success_url = '/thanks/'
 
     def form_valid(self, form):
+        get_trains.delay(form.cleaned_data, 0, None)
         # This method is called when valid form data has been POSTed.
         # It should return an HttpResponse.
 #        form.send_email()

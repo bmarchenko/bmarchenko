@@ -115,7 +115,7 @@ LOGGING = {
 
 import djcelery
 djcelery.setup_loader()
-CELERY_IMPORTS = ("search.views", )
+CELERY_IMPORTS = ("search.tasks", )
 
 try:
     from local_settings import *
