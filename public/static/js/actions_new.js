@@ -630,6 +630,22 @@ $(document).ready(function(){
 
 		var temp ='';
 
+        var frm = $('#sms-query-form');
+        frm.submit(function () {
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(),
+                success: function (data) {
+                    if (data){
+                    frm.html("<h3>Дякуємо. Вам прийде повідомлення коли з'являться квитки.<h3>");
+                    }
+                }
+            });
+
+            return false;
+        });
+
 		function initForm() {
 			$.ajax({
 				url:	"rezerv/aj_init.php",

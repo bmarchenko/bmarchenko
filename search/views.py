@@ -1,32 +1,25 @@
 # Create your views here.
-from django.views.generic import View, TemplateView, DetailView
-from django.http import HttpResponse, HttpResponseRedirect, Http404
-from celery import task
+from django.views.generic import View
+from django.http import HttpResponse
 from search.forms import QueryForm
-from django.core.mail import send_mail
+from search.models import Station
+import urllib2, urllib
+from django.views.generic.edit import FormView
+from search.tasks import get_trains
 try:
     import json
 except ImportError:
     import simplejson as json
-from search.models import Station
-from django.core.serializers import serialize
-from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from django.shortcuts import redirect
-import urllib2, urllib
-from django.views.generic.edit import FormView
-from search.tasks import get_trains
+
 
 class IndexView(FormView):
     template_name = 'stations.html'
     form_class = QueryForm
-    success_url = '/thanks/'
 
     def form_valid(self, form):
         get_trains.delay(form.cleaned_data, 0, None)
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
-#        form.send_email()
-        return super(IndexView, self).form_valid(form)
+        # import ipdb; ipdb.set_trace()
+        return HttpResponse(json.dumps({'success': True}), content_type='application/json')
 
 
 class FilterView(View):
@@ -39,18 +32,13 @@ class FilterView(View):
             ru = True
         stations = list(stations.values())
         stations.append({'ru':ru})
-#        import ipdb; ipdb.set_trace()
         return HttpResponse(json.dumps(stations), content_type='application/json')
 
 
 class GetTrainsView(View):
     def post(self, data):
         query = data.POST
-#        stations =  Station.objects.filter(f_name__startswith=query)
         u = urllib2.urlopen('http://www.pz.gov.ua/rezerv/aj_g60.php', urllib.urlencode(query))
-#        tr = redirect('http://www.pz.gov.ua/rezerv/aj_g60.php/kstotpr=2210700&kstprib=2200001&sdate=11-02-2013')
-
-#        import ipdb; ipdb.set_trace()
         return HttpResponse(u, content_type='application/json')
 
 
