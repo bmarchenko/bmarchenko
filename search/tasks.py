@@ -51,7 +51,7 @@ def get_trains(data, attempt, res_base):
                         msg += 'Train %s new platzcart %d instead of %d ' %(str(train['train']), train['p'], base_train['p'])
                         new_platzcart = True
                 if kype and platzcart:
-                    if not new_kype or not new_platzcart:
+                    if not new_kype and not new_platzcart:
                         return get_trains.retry(args=[data, attempt, res])
                 if kype and not platzcart:
                     if not new_kype:
