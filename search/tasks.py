@@ -9,7 +9,7 @@ except ImportError:
     import simplejson as json
 
 
-@task(name='search.tasks.get_trains', default_retry_delay=1 * 60, max_retries=500)
+@task(name='search.tasks.get_trains', default_retry_delay=1 * 60, max_retries=100)
 def get_trains(data, attempt, res_base):
 
     res = urllib2.urlopen('http://www.pz.gov.ua/rezerv/aj_g60.php', data['query']).read()
