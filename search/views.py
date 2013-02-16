@@ -17,9 +17,12 @@ class IndexView(FormView):
     form_class = QueryForm
 
     def form_valid(self, form):
-        get_trains.delay(form.cleaned_data, 0, None)
-        # import ipdb; ipdb.set_trace()
-        return HttpResponse(json.dumps({'success': True}), content_type='application/json')
+        try:
+            get_trains.delay(form.cleaned_data, 0, None)
+            success = True
+        except:
+            success = False
+        return HttpResponse(json.dumps({'success': success}), content_type='application/json')
 
 
 class FilterView(View):

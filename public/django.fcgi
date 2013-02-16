@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/eval PYTHONPATH=/home/sms-kvytok/modules python
+
 import os, sys
 
 
