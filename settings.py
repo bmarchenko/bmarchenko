@@ -80,9 +80,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-#    'south',
     'search',
     'djcelery',
+    'celerytest',
     'django_extensions',
     'kombu.transport.django',
     # Uncomment the next line to enable the admin:
