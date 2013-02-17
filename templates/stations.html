@@ -3,7 +3,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico" type="image/x-icon" />
-    <link type="text/css" href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet" />
+    <link type="text/css" href="{{ STATIC_URL }}css/jquery-ui-old.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="http://www.pz.gov.ua/rezerv/css/dostavka.css" />
 
 	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.3.2.min.js"></script>
@@ -79,7 +79,8 @@ var lid = 1;
     		<div id="timeout">
 				Запрос будет выполнен через <span class="stan">0</span> сек.
     		</div>
-            <form id="sms-query-form" method='POST' style="display: none">
+            <div id='query-message'></div>
+            <form id="sms-query-form" class="round" method='POST' style="display: none">
                 <h3>Прислати повідомлення коли з'являться нові квитки?</h3>
                 {{ form.query }}
                 {{ form.platzcart }}  Плацкарт<br>
@@ -92,7 +93,7 @@ var lid = 1;
             </form>
         </div>
     </div>
-    
+
 </BODY>
 </HTML>
     

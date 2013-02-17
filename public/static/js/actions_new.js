@@ -614,6 +614,8 @@ function addMessages(data){
 }
 function init_1st_form(){
     before();
+    $('#query-message').html('');
+    $('#sms-query-form').hide();
     $("#gXXparams").hide();
     $("#enterForm").fadeIn(500);
 }
@@ -638,7 +640,8 @@ $(document).ready(function(){
                 data: frm.serialize(),
                 success: function (data) {
                     if (data){
-                    frm.html("<h3>Дякуємо. Вам прийде повідомлення коли з'являться квитки.<h3>");
+                    frm.hide()
+                    $('#query-message').html("<h3>Дякуємо. Вам прийде повідомлення коли з'являться квитки.<h3>");
                     }
                 }
             });
@@ -647,20 +650,20 @@ $(document).ready(function(){
         });
 
 		function initForm() {
-			$.ajax({
-				url:	"rezerv/aj_init.php",
-				type:	"GET",
-				dataType:	"json",
-				success: function(data){
-					//alert(data.nstotpr);
-					$("#stan1").val((data.nstotpr)?data.nstotpr:'');
-					$("#stan2").val((data.nstprib)?data.nstprib:'');
-					$("#numstan1").val((data.kstotpr)?data.kstotpr:'');
-					$("#numstan2").val((data.kstprib)?data.kstprib:'');
-					(data.date)?$("#date").val(data.date):$('#date').datepicker('setDate', +3);
-					refreshbut();
-				}
-			})
+//			$.ajax({
+//				url:	"rezerv/aj_init.php",
+//				type:	"GET",
+//				dataType:	"json",
+//				success: function(data){
+//					//alert(data.nstotpr);
+//					$("#stan1").val((data.nstotpr)?data.nstotpr:'');
+//					$("#stan2").val((data.nstprib)?data.nstprib:'');
+//					$("#numstan1").val((data.kstotpr)?data.kstotpr:'');
+//					$("#numstan2").val((data.kstprib)?data.kstprib:'');
+//					(data.date)?$("#date").val(data.date):$('#date').datepicker('setDate', +3);
+//					refreshbut();
+//				}
+//			})
 		}
 
 		$("#changeimg").click(function(){
@@ -706,7 +709,7 @@ $(document).ready(function(){
     function initFields(){
 			$('#stan1, #stan2, #date, #numstan1, #numstan2').val('');
 			$('#stan1').focus();
-			$('#date').datepicker('setDate', +3);
+			$('#date').datepicker('setDate', new Date());
 			refreshbut();
 		}
 
@@ -731,12 +734,12 @@ $(document).ready(function(){
 				$('#debug').val(event.keyCode);
 				value = $(this).val();
 
-				if (value.length < 3  ){
+				if (value.length < 2  ){
 					$('#num'+txt).val('');
 					refreshbut();
 				}
 
-				temppr = ( (value.length < 3) || (isUprCode(lastKeyCode)) )?false:true;
+				temppr = ( (value.length < 2) || (isUprCode(lastKeyCode)) )?false:true;
 
 				if ( temppr) {
 					$.getJSON('/get-stations', {'stan':value}, onAjaxSuccess);
