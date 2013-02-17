@@ -24,7 +24,7 @@ def get_trains(data, attempt, res_base):
         return get_trains.retry(args=[data, attempt, res_base])
 
     base_dict = json.loads(res_base)
-    base_dict = {}
+    base_trains = {}
     if base_dict.get('trains'):
         base_trains = base_dict['trains']
     kype = data['kype']
