@@ -84,6 +84,7 @@ INSTALLED_APPS = (
     'search',
     'djcelery',
     'django_extensions',
+    'kombu.transport.django',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -116,6 +117,7 @@ LOGGING = {
 import djcelery
 djcelery.setup_loader()
 CELERY_IMPORTS = ("search.tasks", )
+BROKER_URL = 'django://'
 
 try:
     from local_settings import *
