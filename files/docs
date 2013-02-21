@@ -56,4 +56,6 @@ alert("success");
 // Set another completion function for the request above
 jqxhr.complete(function(){ alert("second complete"); });
 
+==========
+reg = re.compile(r'(.*)\s+\((.*)\)~(\d+)')
 

@@ -1,6 +1,8 @@
 from django.db import models
 
 class Station(models.Model):
+    id_rozklad = models.IntegerField(blank=True, null=True)
+    country = models.CharField(max_length=300)
     name_ukr = models.CharField(max_length=300)
     name_ru = models.CharField(max_length=300, blank=True, null=True)
 
