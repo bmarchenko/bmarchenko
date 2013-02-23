@@ -58,4 +58,6 @@ jqxhr.complete(function(){ alert("second complete"); });
 
 ==========
 reg = re.compile(r'(.*)\s+\((.*)\)~(\d+)')
-
+соснівка
+олександрівка
+городище
