@@ -3,7 +3,6 @@ from django.views.generic import TemplateView
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
-from django.views.generic.simple import direct_to_template
 urlpatterns = patterns('',
 
     # Examples:
