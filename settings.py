@@ -64,7 +64,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'tickets.urls'
+ROOT_URLCONF = 'bmarchenko.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -81,9 +81,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'search',
-    'djcelery',
     'django_extensions',
-    'kombu.transport.django',
+    'pygmentize',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -112,11 +111,6 @@ LOGGING = {
         },
     }
 }
-
-import djcelery
-djcelery.setup_loader()
-CELERY_IMPORTS = ("search.tasks", )
-BROKER_URL = 'django://'
 
 try:
     from local_settings import *

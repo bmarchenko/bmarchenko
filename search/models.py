@@ -27,7 +27,7 @@ class Station(models.Model):
 class Station_schedule(models.Model):
     country = models.IntegerField(choices=COUNTRIES, blank=True, null=True)
     name = models.CharField(max_length=300)
-    station = models.OneToOneField(Station, blank=True, null=True)
+    station = models.ForeignKey(Station, blank=True, null=True)
 
     def __unicode__(self):
         return self.name
