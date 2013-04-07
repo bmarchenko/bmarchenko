@@ -1,4 +1,4 @@
-#!/usr/bin/eval PYTHONPATH=/home/sms-kvytok/modules python
+#!/usr/bin/eval PYTHONPATH=/home/bmarchenko/modules python
 
 import os, sys
 
