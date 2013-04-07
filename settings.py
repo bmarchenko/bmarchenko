@@ -81,8 +81,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'search',
-    'django_extensions',
-    'pygmentize',
+#    'django_extensions',
+#    'pygmentize',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
