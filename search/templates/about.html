@@ -1,43 +1,14 @@
 {% extends "base.html" %}
-{% block menu %}
-<ul class="nav pull-right">
-    <li>
-        <a href="/"><i class="icon-home"></i><br />Home</a>
-    </li>
-    <li>
-        <a href="http://careers.stackoverflow.com/bmarchenko"><i class="icon-tasks"></i><br />Resume</a>
-    </li>
-    <li>
-        <a href="/blog"><i class="icon-comments"></i><br />Blog</a>
-    </li>
-    <li>
-        <a href="photos"><i class="icon-camera"></i><br />Photos</a>
-    </li>
-    <li class="current-page">
-        <a href="/about"><i class="icon-user"></i><br />About</a>
-    </li>
-    <li>
-        <a href="/contact-me"><i class="icon-envelope-alt"></i><br />Contact</a>
-    </li>
-</ul>
-{% endblock %}
-
 {% block content %}
-
-        <!-- Page Title -->
-        <div class="page-title">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <i class="icon-user page-title-icon"></i>
-                        <h2>About Me /</h2>
-                        <p>Below you can find more information about my person</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-<h4>Python/Django Development</h4>
-<p>I'm a Python web developer. I build all sorts of websites, tools, and applications. I occasionally post my ramblings, code, and other tid bits on this site.</p>
-
+    <section id="archive">
+        <h1>About</h1>
+        <br />
+        <img class="inline" title="Bogdan Marchenko, the Superuser" src="{{ STATIC_URL }}img/bmarchenko.jpg" alt="Bogdan Marchenko" width=250px/>
+        <article>
+            <p>U CAN HAS MOAR APPLICATIONS IN PYTHON</p>
+            <p>My personal projects can be found on <a href="https://github.com/bmarchenko" rel="author">GitHub</a>.</p>
+            <p>My resume can be found on <a href="http://careers.stackoverflow.com/bmarchenko" rel="author">Stackoverflow</a>.</p>
+        </article>
+    </section>
 {% endblock content %}
 
