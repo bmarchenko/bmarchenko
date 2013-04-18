@@ -6,47 +6,53 @@
     <title>Bogdan Marchenko</title>
     <meta name="description" content="Homepage of Bogdan Marchenko. Python Engineer in Ukraine." />
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/ico" />
-    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="http://www.roguelynn.com/feed.xml" />
 
     <!--Stylesheets-->
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/lightbox.css" media="screen" title="screen">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/screen.css" media="screen" title="screen">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/basic.css">
+    <link rel="stylesheet" href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css">
+
+    <style type="text/css">
 
 
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    </style>
 </head>
 <body>
-<div class="nav-wrapper">
-    <nav>
-        <ul class="title">
-            <li class="name"><a class="current" href="/">Bogdan Marchenko</a></li>
-            {#            <li class="desc">Coder • Writer • Speaker • PyLady</li>#}
-        </ul>
-        <ul class="contents">
-            <li class="page_item"><a href="/">Home</a></li>
-            <li class="page_item"><a href="/about/">About</a></li>
-        </ul>
-    </nav>
-</div>
-<div class="page">
 
-{% block content %}
-{% endblock %}
+<!-- Part 1: Wrap all page content here -->
+<div id="wrap">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="/">Bogdan Marchenko</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="page_item"><a href="/">Home</a></li>
+                        <li class="page_item"><a href="/about/">About</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Begin page content -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div id="push"></div>
 </div>
 
-<div class="footer-wrapper">
-    <footer id="bottom">
-        <ul class="social">
-            {#            <li><a class="icon github" data-icon="&#62208;" href="http://github.com/econchick" title="GitHub"></a></li>#}
-            {#            <li><a class="icon rss" data-icon="&#59194;" href="http://www.roguelynn.com/feed.xml" title="RSS"></a></li>#}
-            <li>© 2013 Bogdan Marchenko. All Rights Reserved.</li>
-        </ul>
-    </footer>
+<div id="footer">
+    <div class="container">
+
+                    <p class="muted credit">© 2013 Bogdan Marchenko. All Rights Reserved.</p>
+    </div>
 </div>
-<!--Javascript-->
-<script src="/assets/js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 <script type="text/javascript">
 
