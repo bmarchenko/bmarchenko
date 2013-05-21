@@ -28,8 +28,9 @@
                 <a class="brand" href="/">Bogdan Marchenko</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="page_item"><a href="/">Home</a></li>
-                        <li class="page_item"><a href="/about/">About</a></li>
+                        <li class="page_item"><a href="{% url 'index' %}">Home</a></li>
+                        <li class="page_item"><a href="{% url 'zinnia_entry_archive_index' %}">Blog</a></li>
+                        <li class="page_item"><a href="{% url 'about' %}">About</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>

@@ -19,6 +19,7 @@ STATIC_ROOT = os.path.join(PUBLIC_DIR, 'static-root')
 STATIC_URL = '/static/'   # TODO: tweak this on staging to test with cloudfront CND
 ADMIN_TOOLS_MEDIA_URL = "/static/"
 TIME_ZONE = 'America/Chicago'
+USE_TZ = True
 from imp import find_module
 STATICFILES_DIRS = (
     os.path.join(PUBLIC_DIR, 'static'),
@@ -72,6 +73,13 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_PATH, "templates")
 )
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.request',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'zinnia.context_processors.version',)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -80,11 +88,17 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'search',
-#    'django_extensions',
-#    'pygmentize',
+    'django.contrib.admin',
+    'django.contrib.comments',
+    'django_extensions',
+    'pygmentize',
+    'zinnia',
+    'blog',
+    'south',
+    'tagging',
+    'mptt',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
