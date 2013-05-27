@@ -93,7 +93,6 @@ INSTALLED_APPS = (
     'django_extensions',
     'pygmentize',
     'zinnia',
-    'blog',
     'south',
     'tagging',
     'mptt',

@@ -92,6 +92,7 @@ abbr {
     font-weight: 600;
     text-transform: uppercase;
     color: #313236 !important;
+
 }
 
 
@@ -102,4 +103,10 @@ article {
     margin-bottom: 4em;
     margin-right: 0;
     width: 66.1017%;
+}
+.nav {
+    list-style-type: none !important;
+}
+.navbar li{
+    list-style-image: none !important;
 }
