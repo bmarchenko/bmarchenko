@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block menu %}
+<ul class="nav pull-right">
+    <li>
+        <a href="/"><i class="icon-home"></i><br />Home</a>
+    </li>
+    <li>
+        <a href="http://careers.stackoverflow.com/bmarchenko"><i class="icon-tasks"></i><br />Resume</a>
+    </li>
+    <li class="current-page">
+        <a href="/blog"><i class="icon-comments"></i><br />Blog</a>
+    </li>
+    <li>
+        <a href="photos"><i class="icon-camera"></i><br />Photos</a>
+    </li>
+    <li>
+        <a href="/about"><i class="icon-user"></i><br />About</a>
+    </li>
+    <li>
+        <a href="/contact-me"><i class="icon-envelope-alt"></i><br />Contact</a>
+    </li>
+</ul>
+{% endblock %}
+{% block content %}
+<h2>Welcome to MyNote</h2>
+<hr>
+{% for note in notes %}
+<p>
+    <b>{{ note.title }}</b> <br>
+    {{ note.creation_date }} <br><br>
+    {{ note.text }}
+</p>
+<hr>
+{% endfor %}
+{% endblock %}

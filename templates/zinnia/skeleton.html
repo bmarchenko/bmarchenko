@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% block extra_styles %}
+    <link rel="pingback" href="/xmlrpc/" />
+    <link rel="shortcut icon" href="{{ STATIC_URL }}zinnia/img/favicon.ico" />
+    <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}zinnia/css/screen.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}zinnia/css/print.css" />
+{% endblock %}
+{% block body_class %}zinnia {% block theme-class %}default{% endblock %} {% block color-class %}blue{% endblock %} {% block sidebar-class %}right-sidebar{% endblock %} {% block body-class %}{% endblock %}{% endblock %}
+{% block container %}
+
+    <div class="container">
+      <div id="header">
+        <ul class="top-navigation">
+          <li>
+            <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}" class="sitemap">
+              {% trans "Sitemap" %}
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'zinnia_entry_latest_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
+              {% trans "RSS Feed" %}
+            </a>
+          </li>
+        </ul>
+        <form method="get" action="{% url 'zinnia_entry_search' %}">
+          <p>
+            <input type="text" value="{% trans "Keywords..." %}" name="pattern" onfocus="this.value=''" />
+            <input type="submit" class="submitbutton" value="OK" />
+          </p>
+        </form>
+        <h1>
+            Bogdan's Weblog
+          </a>
+        </h1>
+        <blockquote>
+          <p>{% trans "Just another Python Webloggit." %}</p>
+        </blockquote>
+        {% block breadcrumbs %}{% endblock %}
+      </div>
+      {% block slider %}{% endblock %}
+      <div id="content" class="hfeed">
+        {% block content %}
+        <div class="links">
+          <h3>{% trans "Useful links" %}</h3>
+          <ul>
+            <li>
+              <a href="{% url 'zinnia_entry_archive_index' %}" title="{% trans "Weblog index" %}">
+                {% trans "Weblog index" %}
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}">
+                {% trans "Sitemap" %}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="search">
+          <h3>{% trans "Search" %}</h3>
+          {% include "zinnia/tags/search_form.html" %}
+        </div>
+        {% endblock %}
+      </div>
+      <div id="sidebar">
+        {% block sidebar %}
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+{% endblock %}
+
