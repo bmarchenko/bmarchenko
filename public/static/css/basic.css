@@ -110,3 +110,9 @@ article {
 .navbar li{
     list-style-image: none !important;
 }
+
+.entry-share strong{padding-left:1.5em;background:transparent url('../img/comments.png?1317027277') no-repeat scroll}
+.zinnia #header h1{
+    background: none !important;
+    padding-left: 0px !important;
+}

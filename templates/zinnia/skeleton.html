@@ -3,7 +3,6 @@
 {% load url from future %}
 {% block extra_styles %}
     <link rel="pingback" href="/xmlrpc/" />
-    <link rel="shortcut icon" href="{{ STATIC_URL }}zinnia/img/favicon.ico" />
     <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
     <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}zinnia/css/screen.css" />
     <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}zinnia/css/print.css" />
@@ -33,10 +32,9 @@
         </form>
         <h1>
             Bogdan's Weblog
-          </a>
         </h1>
         <blockquote>
-          <p>{% trans "Just another Python Webloggit." %}</p>
+          <p>{% trans "Just another Python Weblog." %}</p>
         </blockquote>
         {% block breadcrumbs %}{% endblock %}
       </div>
