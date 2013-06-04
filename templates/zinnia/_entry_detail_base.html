@@ -86,9 +86,6 @@
       <p class="entry-share">
           <!-- AddThis Button BEGIN -->
       <div class="addthis_toolbox addthis_default_style ">
-          <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-          <a class="addthis_button_tweet"></a>
-          <a class="addthis_button_pinterest_pinit"></a>
           <a class="addthis_counter addthis_pill_style"></a>
       </div>
       <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
@@ -140,20 +137,20 @@
       {% endif %}
       {% endif %}
       {% endwith %}
-{#      {% with pingback_count=object.pingback_count %}#}
-{#      {% if pingback_count %}#}
-{#      , <a href="{{ object.get_absolute_url }}#pingbacks" title="{% blocktrans with object=object.title %}Pingbacks on {{ object }}{% endblocktrans %}">#}
-{#        {% blocktrans count pingback_count=pingback_count %}{{ pingback_count }} pingback{% plural %}{{ pingback_count }} pingbacks{% endblocktrans %}#}
-{#      </a>#}
-{#      {% endif %}#}
-{#      {% endwith %}#}
-{#      {% with trackback_count=object.trackback_count %}#}
-{#      {% if trackback_count %}#}
-{#      , <a href="{{ object.get_absolute_url }}#trackbacks" title="{% blocktrans with object=object.title %}Trackbacks on {{ object }}{% endblocktrans %}">#}
-{#        {% blocktrans count trackback_count=trackback_count %}{{ trackback_count }} trackback{% plural %}{{ trackback_count }} trackbacks{% endblocktrans %}#}
-{#      </a>#}
-{#      {% endif %}#}
-{#      {% endwith %}#}
+      {% with pingback_count=object.pingback_count %}
+      {% if pingback_count %}
+      , <a href="{{ object.get_absolute_url }}#pingbacks" title="{% blocktrans with object=object.title %}Pingbacks on {{ object }}{% endblocktrans %}">
+        {% blocktrans count pingback_count=pingback_count %}{{ pingback_count }} pingback{% plural %}{{ pingback_count }} pingbacks{% endblocktrans %}
+      </a>
+      {% endif %}
+      {% endwith %}
+      {% with trackback_count=object.trackback_count %}
+      {% if trackback_count %}
+      , <a href="{{ object.get_absolute_url }}#trackbacks" title="{% blocktrans with object=object.title %}Trackbacks on {{ object }}{% endblocktrans %}">
+        {% blocktrans count trackback_count=trackback_count %}{{ trackback_count }} trackback{% plural %}{{ trackback_count }} trackbacks{% endblocktrans %}
+      </a>
+      {% endif %}
+      {% endwith %}
     </p>
     {% endblock %}
   </div>
