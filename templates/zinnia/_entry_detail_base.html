@@ -81,7 +81,21 @@
 
   {% block entry-footer %}
   <div class="entry-footer">
+  {% block entry-share %}
 
+      <p class="entry-share">
+          <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+          <a class="addthis_button_tweet"></a>
+          <a class="addthis_button_pinterest_pinit"></a>
+          <a class="addthis_counter addthis_pill_style"></a>
+      </div>
+      <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-507c10b234db68cb"></script>
+      <!-- AddThis Button END -->
+      </p>
+  {% endblock %}
     {% block entry-tags %}
     <p class="entry-tags">
       <strong>{% trans "Tags" %}</strong> :
@@ -94,17 +108,7 @@
       {% endfor %}
     </p>
     {% endblock %}
-      {% block entry-share %}
-          <p class="entry-share">
-              <strong>{% trans "Share" %}</strong> :
-              <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[title]={{ object.title }}&p[summary]={{ object.excerpt }}.&p[url]={{ object.short_url }}&p[images][0]={% if object.image %}{{ object.image.url }}{% endif %}" target="_blank">
-                  <img style="position: relative;top: 5px;" src="{{STATIC_URL}}img/btn_facebook_share.png" alt="Share_button">
-              </a>
-              {#              <a href="http://twitter.com/intent/tweet?text={{ object.title }} : {{ object.short_url }}" class="meta-act-link meta-tweet" target="_blank">#}
-              {#                  <img style="position: relative;top: 5px;" src="{{ STATIC_URL }}icon/share/twitter.png" alt="">#}
-              {#              </a>#}
-          </p>
-      {% endblock %}
+
     {% block entry-shorturl %}
     <p class="entry-shorturl">
       <strong>{% trans "Short url" %}</strong> :
