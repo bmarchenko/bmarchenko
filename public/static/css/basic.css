@@ -9,7 +9,7 @@ body {
 
 body {
     background-color: #F0F2F5 !important;
-
+    background-image: none !important;
     color: #414247 !important;
     font-family: "Myriad Pro", myriad-pro, Verdana, serif !important;
  }
@@ -70,12 +70,10 @@ h2 {
 
 
 h1 {
+    font-family: "Myriad Pro", myriad-pro, Verdana, serif !important;
+    color: #414247 !important;
     display: block;
     font-size: 6em !important;
-}
-
-abbr {
-    color: #38A5DD;
 }
 
 .navbar .brand{
