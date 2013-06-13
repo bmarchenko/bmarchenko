@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     {% block meta %}{% endblock %}
-    <title>Bogdan Marchenko</title>
-    <meta name="description" content="Homepage of Bogdan Marchenko. Python and Django Developer in Ukraine." />
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/ico" />
+    <title>{% block page_title %}Bogdan Marchenko{% endblock %}</title>
+    <meta name="description" content="{% block page_description %}Homepage of Bogdan Marchenko. Python and Django Developer in Ukraine.{% endblock %}" />
+    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/ico" />
 
     <!--Stylesheets-->
     <link rel="stylesheet" href="{{ STATIC_URL }}css/basic.css">
