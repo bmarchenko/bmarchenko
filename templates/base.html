@@ -24,10 +24,11 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="brand" href="/">Bogdan Marchenko</a>
+                <a class="brand" href="/"><img href="{{ STATIC_URL }}img/favicon.ico" type="image/ico">Bogdan Marchenko</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li class="page_item"><a href="{% url 'index' %}">Home</a></li>
+                        <li class="page_item"><a href="{% url 'technologies' %}">Technologies</a></li>
                         <li class="page_item"><a href="{% url 'zinnia_entry_archive_index' %}">Blog</a></li>
                         <li class="page_item"><a href="{% url 'books' %}">Books</a></li>
                         <li class="page_item"><a href="{% url 'about' %}">About</a></li>

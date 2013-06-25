@@ -4,10 +4,25 @@
 
     <section id="main">
         <section id="splash">
-            <h1>HAI!</h1>
-            <br>
-            <h2>I’m <a href="{% url 'about' %}">Bogdan Marchenko</a>. Python/Django Developer.</h2>
+            <h2>Welcome to the Homepage of <a href="{% url 'about' %}">Bogdan Marchenko</a></h2>
         </section>
+        <img class="inline" title="Bogdan Marchenko, the Superuser" src="{{ STATIC_URL }}img/bmarchenko.jpg" alt="Bogdan Marchenko" width=250px/>
+        <article>
+            <br>
+            <p>I am a Python developer in Ukraine. </p>
+            <p>I love to work with <a href="https://www.djangoproject.com/‎">Django Framework</a> and this is what I do:</p>
+            <ul>
+                <li>Web Applications</li>
+                <li>Content Management Systems (CMS)</li>
+                <li>Data Harvesting</li>
+            </ul>
+            <br>
+            <p>For more information about my personal projects please, visit <a href="https://github.com/bmarchenko" rel="author">GitHub</a>.</p>
+            <p>My resume can be found on <a href="http://careers.stackoverflow.com/bmarchenko" rel="author">Stackoverflow</a>.</p>
+            <br>
+            <p> <a href="mailto:bogdan.marko@gmail.com">bogdan.marko@gmail.com</a> </p>
+        </article>
     </section>
+
 
 {% endblock %}
