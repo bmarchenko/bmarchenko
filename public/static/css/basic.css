@@ -114,3 +114,31 @@ article {
     background: none !important;
     padding-left: 0px !important;
 }
+
+.technology-img{
+    float:left;
+    width:200px
+}
+
+.technology-decription{
+    float:left;
+    width:400px
+}
+
+.other-technologies{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.other-technologies li{
+    display: inline-block;
+    color: #0088CC;
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 105px;
+
+}
+
+.center{
+    text-align: center;
+}
+

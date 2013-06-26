@@ -1,17 +1,41 @@
 {% extends "base.html" %}
 {% block container %}
-<h1>About</h1>
+<h2>Technologies:</h2>
 <br>
-<img class="inline" title="Bogdan Marchenko, the Superuser" src="{{ STATIC_URL }}img/bmarchenko.jpg" alt="Bogdan Marchenko" width=250px/>
-<article>
-    <p><b>"U CAN HAS MOAR APPLICATIONS IN PYTHON"</b></p>
-    <p style="padding-left: 380px;">-LOLCat</p>
-    <br>
-    <p>My personal projects can be found on <a href="https://github.com/bmarchenko" rel="author">GitHub</a>.</p>
-    <br>
-    <p>My resume can be found on <a href="http://careers.stackoverflow.com/bmarchenko" rel="author">Stackoverflow</a>.</p>
-    <br>
-    <p> <a href="mailto:bogdan.marko@gmail.com">bogdan.marko@gmail.com</a> </p>
-</article>
+    <div class="technology-img">
+        <img class="inline" title="Python" src="{{ STATIC_URL }}img/python.png" alt="Python" width="200px"/>
+    </div>
+
+    <div class="technology-description">
+        <h3>Python</h3><a rel="nofollow" href="http://www.python.org/">www.python.org</a> <p>Python is a dynamic object-oriented programming language that can be used for many kinds of software development. It offers strong support for integration with other languages and tools, comes with extensive standart libraries, and can be learned in a few days.</p>
+    </div>
+
+    <div style="clear:both"></div>
+    <div class="technology-img">
+        <img class="inline" title="Django" src="{{ STATIC_URL }}img/django.png" alt="Django" width="200px"/>
+    </div>
+
+    <div class="technology-description">
+        <h3>Django</h3><a rel="nofollow" href="www.djangoproject.com">www.djangoproject.com</a> <p>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.</p>
+    </div>
+    <div style="clear:both"></div>
+
+    <div class="technology-img">
+        <img class="inline" title="AppEngine" src="{{ STATIC_URL }}img/appengine.png" alt="AppEngine" width="200px"/>
+    </div>
+
+    <div class="technology-description">
+        <h3>Google AppEngine</h3><a rel="nofollow" href="https://developers.google.com/appengine/">google.com/appengine/</a> <p>App Engine is a complete development stack that uses familiar technologies to build and host applications on the same infrastructure used at Google..</p>
+    </div>
+    <div style="clear:both"></div>
+    <h3 class="center">Other technologies:</h3>
+<ul class="other-technologies">
+<li>Solr</li>
+<li>ExtJs</li>
+<li>JavaScript</li>
+<li>Ajax</li>
+<li>JQuery</li>
+</ul>
+
 {% endblock %}
 
