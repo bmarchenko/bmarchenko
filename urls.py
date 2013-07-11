@@ -7,7 +7,7 @@ urlpatterns = patterns('',
 
     # Examples:
     url(r'^$', TemplateView.as_view(template_name='index.html'), name="index"),
-    url(r'learning', TemplateView.as_view(template_name='learning.html'), name="learning"),
+    url(r'projects', TemplateView.as_view(template_name='projects.html'), name="projects"),
     url(r'materials', TemplateView.as_view(template_name='materials.html'), name="materials"),
     url(r'technologies', TemplateView.as_view(template_name='technologies.html'), name="technologies"),
 #    url(r'get-stations', FilterView.as_view(), {}, name='get_stations'),
