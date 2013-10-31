@@ -1,6 +1,8 @@
 {% extends "base.html" %}
+{% load i18n %}
+
 {% block container %}
-<h2>Technologies:</h2>
+<h2>{% trans "Technologies" %}:</h2>
 <br>
     <div class="technology-img">
         <img class="inline" title="Python" src="{{ STATIC_URL }}img/python.png" alt="Python" width="200px"/>
@@ -28,7 +30,7 @@
         <h3>Google AppEngine</h3><a rel="nofollow" href="https://developers.google.com/appengine/" target="_blank">google.com/appengine/</a> <p>App Engine is a complete development stack that uses familiar technologies to build and host applications on the same infrastructure used at Google..</p>
     </div>
     <div style="clear:both"></div>
-    <h3 class="center">Other technologies:</h3>
+    <h3 class="center">{% trans "Other technologies" %}:</h3>
 <ul class="other-technologies">
 <li>Solr</li>
 <li>ExtJs</li>

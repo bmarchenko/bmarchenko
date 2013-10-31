@@ -4,10 +4,8 @@
 {% block extra_styles %}
     <link rel="pingback" href="/xmlrpc/" />
     <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
-    <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}zinnia/css/screen.css" />
-    <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}zinnia/css/print.css" />
 {% endblock %}
-{% block body_class %}zinnia {% block theme-class %}default{% endblock %} {% block color-class %}blue{% endblock %} {% block sidebar-class %}right-sidebar{% endblock %} {% block body-class %}{% endblock %}{% endblock %}
+{% block body_class %}zinnia  {% block sidebar-class %}right-sidebar{% endblock %} {% block body-class %}{% endblock %}{% endblock %}
 {% block container %}
 
     <div class="container">
@@ -31,7 +29,7 @@
           </p>
         </form>
         <h2>
-            Weblog
+            {% trans "Weblog" %}
         </h2>
         <blockquote>
           <p> </p>

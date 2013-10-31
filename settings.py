@@ -8,6 +8,7 @@ sys.path.insert(0, os.path.join(PROJECT_PATH, "apps"))
 
 LANGUAGES = [
     ('en', 'English'),
+    ('uk', 'Ukrainian'),
     ]
 DATE_FORMAT = 'F j, Y'
 
@@ -39,6 +40,9 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
+LOCALE_PATHS = (
+    os.path.join(PROJECT_PATH, 'locale'),
+)
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = (
@@ -58,11 +62,13 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
 #    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+
 )
 
 ROOT_URLCONF = 'bmarchenko.urls'

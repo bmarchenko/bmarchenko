@@ -1,73 +1,81 @@
+{% load i18n %}
+
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% block meta %}{% endblock %}
-    <title>{% block page_title %}Bogdan Marchenko{% endblock %}</title>
-    <meta name="description" content="{% block page_description %}Homepage of Bogdan Marchenko. Python and Django Developer in Ukraine.{% endblock %}" />
-    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/ico" />
+<html lang="{{ request.LANGUAGE_CODE }}">
+  <head>
+      <meta charset="UTF-8">
+      {% block meta %}{% endblock %}
+      <title>{% block page_title %}{% trans "Bogdan Marchenko" %}{% endblock %}</title>
+      <meta name="description" content="{% block page_description %}{% trans "Homepage of Bogdan Marchenko. Python and Django Developer in Ukraine." %} {% endblock %}" />
+      <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/ico" />
 
-    <!--Stylesheets-->
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/basic.css">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/twitter-bootstrap.css">
+      <!--Stylesheets-->
+        <link rel="stylesheet" href="{{ STATIC_URL }}zinnia/css/screen.css" />
 
-    {% block extra_styles %}{% endblock %}
-    {% block link %}{% endblock %}
-    {% block script %}{% endblock %}
-</head>
-<body class="{% block body_class %}{% endblock %}">
+      <link rel="stylesheet" href="{{ STATIC_URL }}css/twitter-bootstrap.css">
+      <link rel="stylesheet" href="{{ STATIC_URL }}css/basic.css">
 
-<!-- Part 1: Wrap all page content here -->
-<div id="wrap">
 
+      {% block extra_styles %}{% endblock %}
+      {% block link %}{% endblock %}
+      {% block script %}{% endblock %}
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    <div id="wrap">
     <!-- Fixed navbar -->
-    <div class="navbar navbar-fixed-top">
+      <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
-            <div class="container">
-                <a class="brand" href="/"><img href="{{ STATIC_URL }}img/favicon.ico" type="image/ico">Bogdan Marchenko</a>
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li class="page_item"><a href="{% url 'index' %}">Home</a></li>
-                        <li class="page_item"><a href="{% url 'technologies' %}">Technologies</a></li>
-                        <li class="page_item"><a href="{% url 'zinnia_entry_archive_index' %}">Blog</a></li>
-                        <li class="page_item"><a href="{% url 'materials' %}">Materials</a></li>
-                        <li class="page_item"><a href="{% url 'projects' %}">Projects</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
+          <div class="container">
+          <a class="brand" href="/"><img href="{{ STATIC_URL }}img/favicon.ico" type="image/ico">{% trans "Bogdan Marchenko" %}</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="page_item"><a href="{% url 'index' %}">{% trans "Home" %}</a></li>
+                <li class="page_item"><a href="{% url 'technologies' %}">{% trans "Technologies" %}</a></li>
+                <li class="page_item"><a href="{% url 'zinnia_entry_archive_index' %}">{% trans "Blog" %}</a></li>
+                <li class="page_item"><a href="{% url 'materials' %}">{% trans "Materials" %}</a></li>
+                <li class="page_item"><a href="{% url 'projects' %}">{% trans "Projects" %}</a></li>
+                <li>
+                  <form name="setLangEnglish" action="/i18n/setlang/" method="POST">{% csrf_token %}
+                    <input name="next" type="hidden" value="/" />
+                    <input type="hidden" name="language" value="en" />
+                    <a class="en" href="#" onclick="document.setLangEnglish.submit();return false;"></a>
+                  </form>
+                </li>
+                <li>
+                  <form name="setLangUkrainian" action="/i18n/setlang/" method="POST">{% csrf_token %}
+                    <input name="next" type="hidden" value="/" />
+                    <input type="hidden" name="language" value="uk" />
+                    <a class="ukr" href="#" onclick="document.setLangUkrainian.submit();return false;"></a>
+                  </form>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
-    </div>
-
-    <!-- Begin page content -->
-    <div class="container">
+      </div>
+      <div class="container">
         {% block container %}
         {% endblock %}
+      </div>
+      <div id="push"></div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">{% trans "© 2013 Bogdan Marchenko. All Rights Reserved." %}</p>
+      </div>
     </div>
 
-    <div id="push"></div>
-</div>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39155239-1']);
+      _gaq.push(['_trackPageview']);
 
-<div id="footer">
-    <div class="container">
-
-                    <p class="muted credit">© 2013 Bogdan Marchenko. All Rights Reserved.</p>
-    </div>
-</div>
-
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-
-<script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-39155239-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
+      (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-</script>
-</body>
+      })();
+    </script>
+  </body>
 </html>
