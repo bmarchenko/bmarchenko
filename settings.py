@@ -5,11 +5,13 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 PUBLIC_DIR = os.path.join(PROJECT_PATH, 'public')
 sys.path.insert(0, os.path.join(PROJECT_PATH, "apps"))
 
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
     ('en', 'English'),
     ('uk', 'Ukrainian'),
     ]
+
 DATE_FORMAT = 'F j, Y'
 
 MEDIA_ROOT = os.path.join(PUBLIC_DIR, "media")
@@ -28,7 +30,6 @@ STATICFILES_DIRS = (
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
@@ -68,6 +69,7 @@ MIDDLEWARE_CLASSES = (
 #    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'middleware.UkrainianLocaleMiddleware'
 
 )
 
