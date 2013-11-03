@@ -238,4 +238,8 @@ a.uk {
   background: url(../img/ico_odesk.png) no-repeat;
 }
 
+ul.bxslider {
+  margin: 0 !important;
+}
+
 

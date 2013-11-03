@@ -1,9 +1,34 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
+{% block script %}
+    <script src="{{ STATIC_URL }}js/jquery.bxslider/jquery.bxslider.min.js"></script>
+      <script type="text/javascript">
+  $(document).ready(function(){
+
+$('.bxslider').bxSlider({
+  mode: 'fade',
+  captions: true
+});
+});
+  </script>
+{% endblock %}
+{% block extra_styles %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}js/jquery.bxslider/jquery.bxslider.css" />
+
+{% endblock %}
+
 {% block container %}
   <section id="main">
-    <section id="splash">
+
+    <ul class="bxslider">
+  <li><img src="{{ STATIC_URL }}/img/treatment.png" title="Treatment - Patient Self-Care. A Telehealth Patient Consulting Service <a href='http://treatment.com/'>treatment.com</a>"/></li>
+  <li><img src="{{ STATIC_URL }}/img/interior-design.png"  title="Interior Design Magazine Website <a href='http://www.interiordesign.net/'>interiordesign.net</a>"/></li>
+  <li><img src="{{ STATIC_URL }}/img/telemedia.png"  title="Online shop Telemedia <a href='http://www.telemedia.ua/'>telemedia.ua</a>"/></li>
+  <li><img src="{{ STATIC_URL }}/img/oerc.png"  title="Online shop Telemedia <a href='http://www.telemedia.ua/'>telemedia.ua</a>"/></li>
+</ul>
+  {% comment %}
+      <section id="splash">
       <h2>{% trans "Homepage of " %}<a href="{% url 'index' %}">{% trans "Bogdan Marchenko" %}</a></h2>
     </section>
     <img class="inline myphoto" title="Bogdan Marchenko" src="{{ STATIC_URL }}img/bmarchenko.jpg" alt="Bogdan Marchenko" width=250px/>
@@ -22,5 +47,7 @@
         <p> <a rel="nofollow" href="https://www.odesk.com/users/~01692e8d9e2829ddf3" target="_blank">www.odesk.com/users/~01692e8d9e2829ddf3</a> </p>
       {% endblocktrans %}
     </article>
+    {% endcomment %}
   </section>
+
 {% endblock %}
