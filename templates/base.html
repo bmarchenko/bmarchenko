@@ -1,19 +1,20 @@
 {% load i18n %}
+{% load scss %}
 
 <!doctype html>
 <html lang="{{ request.LANGUAGE_CODE }}">
   <head>
       <meta charset="UTF-8">
       {% block meta %}{% endblock %}
-      <title>{% block page_title %}{% trans "Bogdan Marchenko" %}{% endblock %}</title>
+      <title>{% block page_title %}{% trans "bmarchenko" %}{% endblock %}</title>
       <meta name="description" content="{% block page_description %}{% trans "Homepage of Bogdan Marchenko. Python and Django Developer in Ukraine." %} {% endblock %}" />
       <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/ico" />
 
       <!--Stylesheets-->
       <link rel="stylesheet" href="{{ STATIC_URL }}zinnia/css/screen.css" />
 
-      <link rel="stylesheet" href="{{ STATIC_URL }}css/twitter-bootstrap.css">
-      <link rel="stylesheet" href="{{ STATIC_URL }}css/basic.css">
+      <link rel="stylesheet" href="{{ STATIC_URL }}styles/twitter-bootstrap.css" />
+      <link rel="stylesheet" href="{{ STATIC_URL }}{% scss "styles/base.scss" %}" />
       <script src="{{ STATIC_URL }}js/jquery-1.8.2.min.js"></script>
 
 

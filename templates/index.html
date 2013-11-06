@@ -1,32 +1,27 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load scss %}
+{% load coffeescript %}
 
 {% block script %}
-    <script src="{{ STATIC_URL }}js/jquery.bxslider/jquery.bxslider.min.js"></script>
-      <script type="text/javascript">
-  $(document).ready(function(){
-
-$('.bxslider').bxSlider({
-  mode: 'fade',
-  captions: true
-});
-});
-  </script>
+  <script src="{{ STATIC_URL }}js/jquery.bxslider/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL}}{% coffeescript "js/index.coffee" %}"></script>
 {% endblock %}
 {% block extra_styles %}
     <link rel="stylesheet" href="{{ STATIC_URL }}js/jquery.bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}{% scss "styles/index.scss" %}" />
 
 {% endblock %}
 
 {% block container %}
   <section id="main">
-
+    <div class="screen-white"></div>
     <ul class="bxslider">
-  <li><img src="{{ STATIC_URL }}/img/treatment.png" title="Treatment - Patient Self-Care. A Telehealth Patient Consulting Service <a href='http://treatment.com/'>treatment.com</a>"/></li>
-  <li><img src="{{ STATIC_URL }}/img/interior-design.png"  title="Interior Design Magazine Website <a href='http://www.interiordesign.net/'>interiordesign.net</a>"/></li>
-  <li><img src="{{ STATIC_URL }}/img/telemedia.png"  title="Online shop Telemedia <a href='http://www.telemedia.ua/'>telemedia.ua</a>"/></li>
-  <li><img src="{{ STATIC_URL }}/img/oerc.png"  title="Online shop Telemedia <a href='http://www.telemedia.ua/'>telemedia.ua</a>"/></li>
-</ul>
+      <li><img src="{{ STATIC_URL }}/img/interior-design.png"  title="Interior Design Magazine Website <a href='http://www.interiordesign.net/'>interiordesign.net</a>"/></li>
+      <li><img src="{{ STATIC_URL }}/img/treatment.png" title="Treatment - Patient Self-Care. A Telehealth Patient Consulting Service <a href='http://treatment.com/'>treatment.com</a>"/></li>
+      <li><img src="{{ STATIC_URL }}/img/telemedia.png"  title="Online shop Telemedia <a href='http://www.telemedia.ua/'>telemedia.ua</a>"/></li>
+      <li><img src="{{ STATIC_URL }}/img/oerc.png"  title="Online shop Telemedia <a href='http://www.telemedia.ua/'>telemedia.ua</a>"/></li>
+    </ul>
   {% comment %}
       <section id="splash">
       <h2>{% trans "Homepage of " %}<a href="{% url 'index' %}">{% trans "Bogdan Marchenko" %}</a></h2>

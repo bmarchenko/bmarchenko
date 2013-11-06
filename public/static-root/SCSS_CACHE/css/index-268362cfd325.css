@@ -1,0 +1,10 @@
+a {
+  font-size: 26px;
+  font-weight: bold; }
+
+p {
+  font-size: 12px; }
+  p a {
+    text-decoration: none; }
+    p a:hover {
+      border-width: 1px; }

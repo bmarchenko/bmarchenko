@@ -1,10 +1,6 @@
-/* Sticky footer styles
--------------------------------------------------- */
 
-html,
-body {
+html, body {
     height: 100%;
-    /* The html and body elements cannot have any padding or margin. */
 }
 
 body {
@@ -12,37 +8,81 @@ body {
     background-image: none;
     color: #414247;
     font-family: "Myriad Pro", myriad-pro, Verdana, serif !important;
- }
-
-/* Wrapper for page content to push down footer */
-#wrap {
+  #wrap {
     min-height: 100%;
     height: auto !important;
     height: 100%;
     /* Negative indent footer by it's height */
     margin: 0 auto -60px;
-}
-
-/* Set the fixed height of the footer here */
-#push,
-#footer {
+  }
+  #push,
+  #footer {
     height: 60px;
-}
-#footer {
+  }
+  #footer {
     background-color: #313236;
-
     color: #f5f5f5;
-}
-
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
-    #footer {
-        margin-left: -20px;
-        margin-right: -20px;
-        padding-left: 20px;
-        padding-right: 20px;
+    padding-top: 0 !important;
+    ul {
+      list-style-image: none !important;
+      list-style-type: none !important;
     }
-}
+
+   li {
+      float: right;
+      margin: 0 10px 0 0;
+      list-style-image: none;
+    }
+
+    li.copyright {
+      float: left;
+      padding-top: 3px;
+    }
+
+    li.phone {
+      padding-top: 3px;
+    }
+
+    li a {
+      height: 24px;
+      width: 24px;
+      display: block;
+      background: url(../img/ico_skype.png) no-repeat;
+      border-radius: 3px;
+    }
+
+    li.fb a {
+      background: url(../img/ico_facebook.png) no-repeat;
+    }
+
+    li.in a {
+      background: url(../img/ico_linkedin.png) no-repeat;
+    }
+
+    li.email a {
+      background: url(../img/ico_gmail.png) no-repeat;
+    }
+
+    li.odesk a {
+      height: 23px;
+      width: 23px;
+      background: url(../img/ico_odesk.png) no-repeat;
+    }
+
+    li.tel a {
+      background: url(../img/ico_odesk.png) no-repeat;
+    }
+  }
+  /* Lastly, apply responsive CSS fixes as necessary */
+  @media (max-width: 767px) {
+      #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+  }
+ }
 
 form {
   margin-bottom: 0px;
@@ -78,7 +118,8 @@ h1 {
     font-size: 6em;
 }
 
-.navbar .brand{
+.navbar {
+  .brand{
     padding-left: 60px !important;;
     float: left;
     color: #313236 !important;
@@ -92,18 +133,32 @@ h1 {
     font-family: "Viafont", myriad-pro, Verdana, serif;
     font-size: 2em;
     margin-left: 0px;
+  }
 
-}
-
-.navbar .nav-collapse {
-    float: right;
-}
-
-.navbar .nav > li > a {
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #313236;
-    font-size: 14px;
+  .nav-collapse {
+      float: right;
+  }
+  .nav {
+      list-style-type: none !important;
+    li {
+      list-style-image: none;
+      a {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #313236;
+      font-size: 14px;
+      }
+      a.lang {
+        float: none;
+        display: inline-block;
+        margin-top: 7px;
+        height: 5px;
+      }
+    }
+  }
+  .navbar-inner .container {
+    padding: 5px 0;
+  }
 
 }
 
@@ -116,12 +171,7 @@ article {
     margin-right: 0;
     width: 66.1017%;
 }
-.nav {
-    list-style-type: none !important;
-}
-.navbar li{
-    list-style-image: none;
-}
+
 
 .entry-share strong{padding-left:1.5em;background:transparent url('../img/comments.png?1317027277') no-repeat scroll}
 .zinnia #header h1{
@@ -155,12 +205,6 @@ article {
     text-align: center;
 }
 
-.nav a.lang {
-  float: none;
-  display: inline-block;
-  margin-top: 7px;
-  height: 5px;
-}
 
 a.en {
   margin-left: 27px;
@@ -179,63 +223,6 @@ a.uk {
 
 #splash {
   margin-bottom: 28px;
-}
-.navbar-inner .container {
-  padding: 5px 0;
-}
-
-#footer {
-  padding-top: 0 !important;
-}
-
-#footer ul {
-  list-style-image: none !important;
-  list-style-type: none !important;
-}
-
-#footer li {
-  float: right;
-  margin: 0 10px 0 0;
-  list-style-image: none;
-}
-
-#footer li.copyright {
-  float: left;
-  padding-top: 3px;
-}
-
-#footer li.phone {
-  padding-top: 3px;
-}
-
-#footer li a {
-  height: 24px;
-  width: 24px;
-  display: block;
-  background: url(../img/ico_skype.png) no-repeat;
-  border-radius: 3px;
-}
-
-#footer li.fb a {
-  background: url(../img/ico_facebook.png) no-repeat;
-}
-
-#footer li.in a {
-  background: url(../img/ico_linkedin.png) no-repeat;
-}
-
-#footer li.email a {
-  background: url(../img/ico_gmail.png) no-repeat;
-}
-
-#footer li.odesk a {
-  height: 23px;
-  width: 23px;
-  background: url(../img/ico_odesk.png) no-repeat;
-}
-
-#footer li.tel a {
-  background: url(../img/ico_odesk.png) no-repeat;
 }
 
 ul.bxslider {

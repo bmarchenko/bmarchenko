@@ -1,0 +1,172 @@
+html, body {
+  height: 100%; }
+
+body {
+  background-color: #F0F2F5;
+  background-image: none;
+  color: #414247;
+  font-family: "Myriad Pro", myriad-pro, Verdana, serif !important;
+  /* Lastly, apply responsive CSS fixes as necessary */ }
+  body #wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px; }
+  body #push,
+  body #footer {
+    height: 60px; }
+  body #footer {
+    background-color: #313236;
+    color: #f5f5f5;
+    padding-top: 0 !important; }
+    body #footer ul {
+      list-style-image: none !important;
+      list-style-type: none !important; }
+    body #footer li {
+      float: right;
+      margin: 0 10px 0 0;
+      list-style-image: none; }
+    body #footer li.copyright {
+      float: left;
+      padding-top: 3px; }
+    body #footer li.phone {
+      padding-top: 3px; }
+    body #footer li a {
+      height: 24px;
+      width: 24px;
+      display: block;
+      background: url('/static/img/ico_skype.png') no-repeat;
+      border-radius: 3px; }
+    body #footer li.fb a {
+      background: url('/static/img/ico_facebook.png') no-repeat; }
+    body #footer li.in a {
+      background: url('/static/img/ico_linkedin.png') no-repeat; }
+    body #footer li.email a {
+      background: url('/static/img/ico_gmail.png') no-repeat; }
+    body #footer li.odesk a {
+      height: 23px;
+      width: 23px;
+      background: url('/static/img/ico_odesk.png') no-repeat; }
+    body #footer li.tel a {
+      background: url('/static/img/ico_odesk.png') no-repeat; }
+  @media (max-width: 767px) {
+    body #footer {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+form {
+  margin-bottom: 0px; }
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+#wrap > .container {
+  padding-top: 60px; }
+
+.container .credit {
+  margin: 20px 0; }
+
+code {
+  font-size: 80%; }
+
+h2 {
+  font-size: 2em;
+  text-transform: uppercase; }
+
+h1 {
+  font-family: "Myriad Pro", myriad-pro, Verdana, serif;
+  color: #414247;
+  display: block;
+  font-size: 6em; }
+
+.navbar .brand {
+  padding-left: 60px !important;
+  float: left;
+  color: #313236 !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0;
+  padding-top: 8px;
+  padding-left: 18px;
+  line-height: 1 !important;
+  background: url('/static/img/logo.jpg') no-repeat;
+  font-family: "Viafont", myriad-pro, Verdana, serif;
+  font-size: 2em;
+  margin-left: 0px; }
+.navbar .nav-collapse {
+  float: right; }
+.navbar .nav {
+  list-style-type: none !important; }
+  .navbar .nav li {
+    list-style-image: none; }
+    .navbar .nav li a {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #313236;
+      font-size: 14px; }
+    .navbar .nav li a.lang {
+      float: none;
+      display: inline-block;
+      margin-top: 7px;
+      height: 5px; }
+.navbar .navbar-inner .container {
+  padding: 5px 0; }
+
+article {
+  display: inline;
+  float: right;
+  font-size: 1.2em;
+  margin-bottom: 4em;
+  margin-right: 0;
+  width: 66.1017%; }
+
+.entry-share strong {
+  padding-left: 1.5em;
+  background: transparent url('/static/img/comments.png?1317027277') no-repeat scroll; }
+
+.zinnia #header h1 {
+  background: none;
+  padding-left: 0px !important; }
+
+.technology-img {
+  float: left;
+  width: 200px; }
+
+.technology-decription {
+  float: left;
+  width: 400px; }
+
+.other-technologies {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.other-technologies li {
+  display: inline-block;
+  color: #0088CC;
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 105px; }
+
+.center {
+  text-align: center; }
+
+a.en {
+  margin-left: 27px;
+  background: url('/static/img/United-Kingdom-icon-small.png') no-repeat; }
+
+a.uk {
+  margin-left: 10px;
+  background: url('/static/img/Ukraine-icon-small.png') no-repeat; }
+
+.myphoto {
+  border-radius: 10px;
+  float: left; }
+
+#splash {
+  margin-bottom: 28px; }
+
+ul.bxslider {
+  margin: 0 !important; }

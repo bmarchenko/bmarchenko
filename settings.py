@@ -50,6 +50,9 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'django_scss.finders.SCSSFinder',
+    'coffeescript.finders.CoffeescriptFinder',
+
 )
 
 # Make this unique, and don't share it with anybody.
@@ -104,6 +107,8 @@ INSTALLED_APPS = (
     'south',
     'tagging',
     'mptt',
+    'django_scss',
+    'coffeescript'
     # Uncomment the next line to enable the admin:
 
     # Uncomment the next line to enable admin documentation:
