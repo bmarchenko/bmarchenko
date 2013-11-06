@@ -4,3 +4,20 @@
   width: 100%;
   height: 100%;
   background-color: #F0F2F5; }
+
+ul.bxslider {
+  margin: 0 !important; }
+
+.bx-wrapper .bx-viewport {
+  border: none !important;
+  left: 0px !important;
+}
+
+.slides {
+  visibility: hidden;
+  position: relative;
+}
+
+.ready {
+  visibility: visible;
+}
