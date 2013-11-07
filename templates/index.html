@@ -14,34 +14,12 @@
 {% block container %}
   <section class="slides">
     <div class="screen-white"></div>
-
     <ul class="image-slider">
-      <li><img src="{{ STATIC_URL }}/img/interior-design.png" />Interior Design Magazine Website <a href='http://www.interiordesign.net/'>interiordesign.net</a></li>
-      <li><img src="{{ STATIC_URL }}/img/treatment.png" title="Treatment - Patient Self-Care. A Telehealth Patient Consulting Service <a href='http://treatment.com/'>treatment.com</a>"/></li>
-      <li><img src="{{ STATIC_URL }}/img/telemedia.png"  title="Online shop Telemedia <a href='http://www.telemedia.ua/'>telemedia.ua</a>"/></li>
-      <li><img src="{{ STATIC_URL }}/img/oerc.png"  title="Online shop Telemedia <a href='http://www.telemedia.ua/'>telemedia.ua</a>"/></li>
+      <li><img src="{{ STATIC_URL }}/img/interior-design.png">{% blocktrans %}<a href="http://www.interiordesign.net/" target="_blank">Interior Design </a>Magazine website{% endblocktrans %}</li>
+      <li><img src="{{ STATIC_URL }}/img/treatment.png">{% blocktrans %}A Telehealth Patient Consulting Service <a href="http://treatment.com/" target="_blank">Treatment. Patient Self-Care.</a>{% endblocktrans %}</li>
+      <li><img src="{{ STATIC_URL }}/img/telemedia.png">{% blocktrans %}<a href='http://www.telemedia.ua/'>Telemedia</a> website{% endblocktrans %}</li>
+      <li><img src="{{ STATIC_URL }}/img/oerc.png">{% blocktrans %}<a href='http://www.telemedia.ua/'>Open Educational Resources Commons</a> website{% endblocktrans %}</li>
     </ul>
-  {% comment %}
-      <section id="splash">
-      <h2>{% trans "Homepage of " %}<a href="{% url 'index' %}">{% trans "Bogdan Marchenko" %}</a></h2>
-    </section>
-    <img class="inline myphoto" title="Bogdan Marchenko" src="{{ STATIC_URL }}img/bmarchenko.jpg" alt="Bogdan Marchenko" width=250px/>
-    <article>
-      {% blocktrans %}
-        <p>I am a Python developer in Ukraine and love to work with <a rel="nofollow" href="https://www.djangoproject.com/‎ target="_blank"">Django Framework.</a></p>
-        <p>I am always open to new people, projects and ideas.</p>
-        <p>If you want to <b>learn/improve you Python Programming</b> skills, come to <a rel="nofollow" href="http://en.wikipedia.org/wiki/Ukraine" target="_blank">Ukraine</a> or <b>travel</b> with me don't hesitate and <a rel="nofollow" href="mailto:me@bmarchenko.com" target="_blank">contact me</a>.</p>
-
-        <br>
-        <h3 class="muted">Contacts:</h3>
-        <p>My full resume can be found on <a rel="nofollow" href="http://careers.stackoverflow.com/bmarchenko" target="_blank">Stackoverflow</a>.</p>
-        <p>For more information about my personal projects please, visit <a rel="nofollow" href="https://github.com/bmarchenko" target="_blank">GitHub</a>.</p>
-        <p> <a rel="nofollow" href="mailto:me@bmarchenko.com" target="_blank">me@bmarchenko.com</a> </p>
-        <p> <a rel="nofollow" href="https://www.facebook.com/bogdan.marchenko.18" target="_blank">www.facebook.com/bogdan.marchenko.18</a> </p>
-        <p> <a rel="nofollow" href="https://www.odesk.com/users/~01692e8d9e2829ddf3" target="_blank">www.odesk.com/users/~01692e8d9e2829ddf3</a> </p>
-      {% endblocktrans %}
-    </article>
-    {% endcomment %}
   </section>
 
 {% endblock %}
