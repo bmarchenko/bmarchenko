@@ -8,6 +8,9 @@
 ul.image-slider {
   margin: 0 !important; }
 
+ul.image-slider li span {
+  padding-left: 10px;
+}
 .bx-wrapper .bx-viewport {
   border: none !important;
   left: 0px !important;

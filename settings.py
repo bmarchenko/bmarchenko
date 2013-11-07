@@ -72,11 +72,11 @@ MIDDLEWARE_CLASSES = (
 #    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'middleware.UkrainianLocaleMiddleware'
+    'middleware.GlobalLocaleMiddleware',
 
 )
 
-ROOT_URLCONF = 'bmarchenko.urls'
+ROOT_URLCONF = 'bmarchenko.urls_en'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -106,6 +106,7 @@ INSTALLED_APPS = (
     'south',
     'tagging',
     'mptt',
+    'common',
     #'django_scss',
     #'coffeescript'
     # Uncomment the next line to enable the admin:
@@ -144,3 +145,4 @@ except:
 
 
 STATIC_URL = '/static/' if DEBUG else 'http://example.com:8000/static/'
+ZINNIA_ENTRY_BASE_MODEL = 'common.lang_entry.LangEntry'

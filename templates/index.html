@@ -8,17 +8,16 @@
 {% block extra_styles %}
     <link rel="stylesheet" href="{{ STATIC_URL }}js/jquery.bxslider/jquery.bxslider.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}styles/index.css" />
-
 {% endblock %}
 
 {% block container %}
   <section class="slides">
     <div class="screen-white"></div>
     <ul class="image-slider">
-      <li><img src="{{ STATIC_URL }}/img/interior-design.png">{% blocktrans %}<a href="http://www.interiordesign.net/" target="_blank">Interior Design </a>Magazine website{% endblocktrans %}</li>
-      <li><img src="{{ STATIC_URL }}/img/treatment.png">{% blocktrans %}A Telehealth Patient Consulting Service <a href="http://treatment.com/" target="_blank">Treatment. Patient Self-Care.</a>{% endblocktrans %}</li>
-      <li><img src="{{ STATIC_URL }}/img/telemedia.png">{% blocktrans %}<a href='http://www.telemedia.ua/'>Telemedia</a> website{% endblocktrans %}</li>
-      <li><img src="{{ STATIC_URL }}/img/oerc.png">{% blocktrans %}<a href='http://www.telemedia.ua/'>Open Educational Resources Commons</a> website{% endblocktrans %}</li>
+      <li><img src="{{ STATIC_URL }}/img/interior-design.png">{% blocktrans %}<span><a href="http://www.interiordesign.net/" target="_blank">Interior Design </a>Magazine website</span>{% endblocktrans %}</li>
+      <li><img src="{{ STATIC_URL }}/img/treatment.png">{% blocktrans %}<span>A Telehealth Patient Consulting Service <a href="http://treatment.com/" target="_blank">Treatment. Patient Self-Care.</a></span>{% endblocktrans %}</li>
+      <li><img src="{{ STATIC_URL }}/img/telemedia.png">{% blocktrans %}<span><a href='http://www.telemedia.ua/' target="_blank">Telemedia</a> website</span>{% endblocktrans %}</li>
+      <li><img src="{{ STATIC_URL }}/img/oerc.png">{% blocktrans %}<span><a href='http://www.telemedia.ua/' target="_blank">Open Educational Resources Commons</a> website</span>{% endblocktrans %}</li>
     </ul>
   </section>
 

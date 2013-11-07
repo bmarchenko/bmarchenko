@@ -2,21 +2,34 @@
 
 from django.conf import settings
 from django.utils import translation
-from django.utils.cache import patch_vary_headers
+from threading import current_thread
 
 
-class UkrainianLocaleMiddleware(object):
+class GlobalLocaleMiddleware(object):
+    _languages = {}
+
+    @staticmethod
+    def get_lang():
+        try:
+            return GlobalLocaleMiddleware._languages[current_thread()]
+        except KeyError:
+            return None
 
     def process_request(self, request):
-
-        is_uk = request.path.startswith(u"/{0}".format("UK"))
-        if is_uk:
-            request.urlconf = u"urls_uk"
-            translation.activate("UK")
-            request.LANGUAGE_CODE = "UK"
-        return None
+        language = "uk" if request.path.startswith(u"/{0}".format("UK")) else "en"
+        request.urlconf = u"urls_{0}".format(language)
+        translation.activate(language)
+        request.LANGUAGE_CODE = language
+        GlobalLocaleMiddleware._languages[current_thread()] = language
 
     def process_response(self, request, response):
+        thread = current_thread()
+        try:
+            del GlobalLocaleMiddleware._languages[thread]
+        except KeyError:
+            pass
         translation.deactivate()
         return response
 
+def get_lang():
+    return GlobalLocaleMiddleware.get_lang()
