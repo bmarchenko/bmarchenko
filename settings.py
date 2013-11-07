@@ -102,7 +102,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.comments',
     'django_extensions',
-    'pygmentize',
     'zinnia',
     'south',
     'tagging',
