@@ -13,13 +13,13 @@ LANGUAGES = [
     ]
 
 DATE_FORMAT = 'F j, Y'
+ALLOWED_HOSTS = ['*']
 
 MEDIA_ROOT = os.path.join(PUBLIC_DIR, "media")
 MEDIA_URL = "/media/"
 ADMIN_MEDIA_PREFIX="/static/admin/"
 
 STATIC_ROOT = os.path.join(PUBLIC_DIR, 'static-root')
-STATIC_URL = '/static/' if DEBUG else 'http://bmarchenko.com/static/'
 ADMIN_TOOLS_MEDIA_URL = "/static/"
 TIME_ZONE = 'America/Chicago'
 USE_TZ = True
@@ -142,3 +142,6 @@ try:
     from local_settings import *
 except:
     pass
+
+
+STATIC_URL = '/static/' if DEBUG else 'http://example.com:8000/static/'

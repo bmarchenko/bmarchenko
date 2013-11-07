@@ -2,7 +2,7 @@
     (function() {
       $(document).ready(function() {
         $(".slides").addClass("ready").find(".screen-white").fadeOut(1000);
-        return $(".bxslider").bxSlider({
+        return $(".image-slider").bxSlider({
           mode: "fade",
           captions: true,
           auto: true
