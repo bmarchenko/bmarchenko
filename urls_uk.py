@@ -7,5 +7,5 @@ from urls_en import common_patterns
 
 
 urlpatterns = patterns("",
-    url(r"^UK/", include(common_patterns)),
+    url(r"^uk/", include(common_patterns)),
 )

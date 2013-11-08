@@ -14,12 +14,13 @@ common_patterns = patterns('',
 
     url(r'^weblog/', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
-    url(r"^switch-lang/(?P<lang>(?:EN|UK))/$", SwitchLanguageView.as_view(), name="switch_language"),
-
+    url(r"^switch-lang/(?P<lang>(?:en|uk))/$", SwitchLanguageView.as_view(), name="switch_language"),
     url(r'^admin/', include(admin.site.urls)),
+
 )
 
 urlpatterns = patterns('',
-    url(r"^$", SwitchLanguageView.as_view(), {"lang": "EN"}, name="switch_language"),
-    url(r"^EN/", include(common_patterns)),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r"^$", SwitchLanguageView.as_view(), {"lang": "en"}, name="switch_language"),
+    url(r"^en/", include(common_patterns)),
 )
