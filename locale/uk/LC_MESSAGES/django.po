@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-01 15:15-0500\n"
+"POT-Creation-Date: 2013-11-10 02:43-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,49 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: templates/base.html:8 templates/base.html.py:29 templates/index.html:7
-msgid "Bogdan Marchenko"
-msgstr "Богдан Марченко"
+#: common/admin.py:7
+msgid "Content"
+msgstr ""
 
-#: templates/base.html:9
-msgid "Homepage of Bogdan Marchenko. Python and Django Developer in Ukraine."
-msgstr "Домашня сторінка Богдана Марченка. Розробника на Python і Django"
-
-#: templates/base.html:32
-msgid "Home"
-msgstr "Головна"
-
-#: templates/base.html:33 templates/technologies.html:5
-msgid "Technologies"
-msgstr "Технології"
-
-#: templates/base.html:34
-msgid "Blog"
-msgstr "Блог"
-
-#: templates/base.html:35 templates/materials.html:5
-msgid "Materials"
-msgstr "Ресурси"
-
-#: templates/base.html:36 templates/projects.html:5
-msgid "Projects"
-msgstr "Проекти"
-
-#: templates/base.html:59
-#, fuzzy
-msgid "© 2013 Bogdan Marchenko."
-msgstr "Богдан Марченко"
-
-#: templates/index.html:7
-msgid "Homepage of "
-msgstr "Домашня сторінка "
-
-#: templates/index.html:11
+#: templates/about.html:12
 msgid ""
 "\n"
-"        <p>I am a Python developer in Ukraine and love to work with <a rel="
-"\"nofollow\" href=\"https://www.djangoproject.com/‎ target=\"_blank"
-"\"\">Django Framework.</a></p>\n"
+"        <p>My name is Bogdan Marchenko. I am a Python developer in Ukraine "
+"and love to work with <a rel=\"nofollow\" href=\"https://www.djangoproject."
+"com/‎ target=\"_blank\"\">Django Framework.</a></p>\n"
 "        <p>I am always open to new people, projects and ideas.</p>\n"
 "        <p>If you want to <b>learn/improve you Python Programming</b> "
 "skills, come to <a rel=\"nofollow\" href=\"http://en.wikipedia.org/wiki/"
@@ -86,8 +53,104 @@ msgid ""
 "~01692e8d9e2829ddf3\" target=\"_blank\">www.odesk.com/users/"
 "~01692e8d9e2829ddf3</a> </p>\n"
 "      "
-msgstr ""
 
+msgstr ""
+"\n"
+"        <p>Мене звати Богдан Марченко. Я займаюсь веб-програмуванням з використанням мови Python, "
+"зокрема, фреймворком <a rel=\"nofollow\" href=\"https://www.djangoproject."
+"com/‎ target=\"_blank\"\">Django.</a></p>\n"
+"        <p>Я відкритий до людей, ідей та нових проектів.</p>\n"
+"        <p>Якщо ви хочете <b>вивчати програмування на Python</b> "
+"або познайомитись, <a rel=\"nofollow\" href=\"mailto:me@bmarchenko.com\" target="
+"\"_blank\">звяжіться зі мною</a>.</p>\n"
+"\n"
+"        <br>\n"
+"        <h3 class=\"muted\">Контаки:</h3>\n"
+"        <p>Моє повне резюме знаходиться на <a rel=\"nofollow\" href=\"http://"
+"careers.stackoverflow.com/bmarchenko\" target=\"_blank\">Stackoverflow</a>.</"
+"p>\n"
+"        <p>Для більш детальної інформації про проекти над якими я процюю, будь ласка, відвідайте <a "
+"rel=\"nofollow\" href=\"https://github.com/bmarchenko\" target=\"_blank"
+"\">GitHub</a>.</p>\n"
+"        <p> <a rel=\"nofollow\" href=\"mailto:me@bmarchenko.com\" target="
+"\"_blank\">me@bmarchenko.com</a> </p>\n"
+"        <p> <a rel=\"nofollow\" href=\"https://www.facebook.com/bogdan."
+"marchenko.18\" target=\"_blank\">www.facebook.com/bogdan.marchenko.18</a> </"
+"p>\n"
+"        <p> <a rel=\"nofollow\" href=\"https://www.odesk.com/users/"
+"~01692e8d9e2829ddf3\" target=\"_blank\">www.odesk.com/users/"
+"~01692e8d9e2829ddf3</a> </p>\n"
+"      "
+
+#: templates/base.html:8
+#, fuzzy
+msgid "bmarchenko"
+msgstr "bmarchenko"
+
+#: templates/base.html:9
+msgid "Homepage of Bogdan Marchenko. Python and Django Developer in Ukraine."
+msgstr "Домашня сторінка Богдана Марченка. Розробника на Python і Django"
+
+#: templates/base.html:33
+msgid "Home"
+msgstr "Головна"
+
+#: templates/base.html:34 templates/technologies.html:5
+msgid "Technologies"
+msgstr "Технології"
+
+#: templates/base.html:35
+msgid "Blog"
+msgstr "Блог"
+
+#: templates/base.html:36 templates/materials.html:5
+msgid "Materials"
+msgstr "Ресурси"
+
+#: templates/base.html:37
+msgid "About"
+msgstr "Про мене"
+
+#: templates/base.html:60
+#, fuzzy
+msgid "© 2013 Bogdan Marchenko."
+msgstr "Богдан Марченко"
+
+#: templates/index.html:14
+msgid "WEB DEVELOPMENT:"
+msgstr "ВЕБ РОЗРОБКА:"
+
+#: templates/index.html:18
+msgid ""
+"<span><a href=\"http://www.interiordesign.net/\" target=\"_blank\">Interior "
+"Design </a>Magazine website</span>"
+msgstr ""
+"<span>Веб-сайт журналу <a href=\"http://www.interiordesign.net/\" target=\"_blank\">Interior "
+"Design </a></span>"
+
+#: templates/index.html:19
+msgid ""
+"<span>A Telehealth Patient Consulting Service <a href=\"http://treatment.com/"
+"\" target=\"_blank\">Treatment. Patient Self-Care.</a></span>"
+msgstr ""
+"<span>Медичний консультаційний сервіс <a href=\"http://treatment.com/"
+"\" target=\"_blank\">Treatment. Patient Self-Care.</a></span>"
+
+#: templates/index.html:20
+msgid ""
+"<span><a href='http://www.telemedia.ua/' target=\"_blank\">Telemedia</a> "
+"website</span>"
+msgstr ""
+"<span>Веб-сайт <a href='http://www.telemedia.ua/' target=\"_blank\">Telemedia</a> "
+"</span>"
+
+#: templates/index.html:21
+msgid ""
+"<span><a href='http://www.telemedia.ua/' target=\"_blank\">Open Educational "
+"Resources Commons</a> website</span>"
+msgstr ""
+"<span>Веб-сайт <a href='http://www.telemedia.ua/' target=\"_blank\">Open Educational "
+"Resources Commons</a></span>"
 #: templates/technologies.html:33
 #, fuzzy
 msgid "Other technologies"
@@ -100,7 +163,7 @@ msgstr "Автор:"
 #: templates/zinnia/_entry_detail_base.html:22
 #, python-format
 msgid "Show all %(author)s's entries"
-msgstr ""
+msgstr "Показати всі статті %(author)s"
 
 #: templates/zinnia/_entry_detail_base.html:24
 msgid "on"
@@ -130,7 +193,7 @@ msgstr ""
 
 #: templates/zinnia/_entry_detail_base.html:75
 msgid "Continue reading"
-msgstr ""
+msgstr "Продовжити"
 
 #: templates/zinnia/_entry_detail_base.html:99 templates/zinnia/base.html:49
 msgid "Tags"
@@ -245,7 +308,7 @@ msgstr ""
 
 #: templates/zinnia/base.html:89 templates/zinnia/base.html.py:90
 msgid "Post an entry"
-msgstr ""
+msgstr "Написати статтю"
 
 #: templates/zinnia/base.html:97 templates/zinnia/base.html.py:98
 msgid "Log out"
@@ -262,7 +325,7 @@ msgstr ""
 
 #: templates/zinnia/skeleton.html:27
 msgid "Keywords..."
-msgstr ""
+msgstr "Ключові слова..."
 
 #: templates/zinnia/skeleton.html:32
 msgid "Weblog"
@@ -279,6 +342,12 @@ msgstr "Індекс блогу"
 #: templates/zinnia/skeleton.html:58
 msgid "Search"
 msgstr "Пошук"
+
+#~ msgid "Projects"
+#~ msgstr "Проекти"
+
+#~ msgid "Homepage of "
+#~ msgstr "Домашня сторінка "
 
 #~ msgid "© 2013 Bogdan Marchenko. All Rights Reserved."
 #~ msgstr "© 2013 Богдан Марченко. Всі права захищено."

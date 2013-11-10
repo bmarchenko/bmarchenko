@@ -8,11 +8,9 @@ class EntryPublishedLangManager(EntryPublishedManager):
 
     def get_query_set(self):
         language = get_lang()
-        print language
         result = entries_published(super(EntryPublishedManager, self).get_query_set())
         if language:
             result = result.filter(language=language)
-            print result
         return result
 
 class LangEntry(EntryAbstractClass):
