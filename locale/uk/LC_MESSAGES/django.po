@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-10 02:43-0600\n"
+"POT-Creation-Date: 2015-02-07 15:05-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,6 +22,10 @@ msgstr ""
 #: common/admin.py:7
 msgid "Content"
 msgstr ""
+
+#: templates/about.html:8
+msgid "Some short info about myself"
+msgstr "Korotka informacija pro mene"
 
 #: templates/about.html:12
 msgid ""
@@ -53,15 +57,14 @@ msgid ""
 "~01692e8d9e2829ddf3\" target=\"_blank\">www.odesk.com/users/"
 "~01692e8d9e2829ddf3</a> </p>\n"
 "      "
-
 msgstr ""
 "\n"
-"        <p>Мене звати Богдан Марченко. Я займаюсь веб-програмуванням з використанням мови Python, "
-"зокрема, фреймворком <a rel=\"nofollow\" href=\"https://www.djangoproject."
-"com/‎ target=\"_blank\"\">Django.</a></p>\n"
+"        <p>Мене звати Богдан Марченко. Я займаюсь веб-програмуванням з "
+"використанням мови Python, зокрема, фреймворком <a rel=\"nofollow\" href="
+"\"https://www.djangoproject.com/‎ target=\"_blank\"\">Django.</a></p>\n"
 "        <p>Я відкритий до людей, ідей та нових проектів.</p>\n"
-"        <p>Якщо ви хочете <b>вивчати програмування на Python</b> "
-"або познайомитись, <a rel=\"nofollow\" href=\"mailto:me@bmarchenko.com\" target="
+"        <p>Якщо ви хочете <b>вивчати програмування на Python</b> або "
+"познайомитись, <a rel=\"nofollow\" href=\"mailto:me@bmarchenko.com\" target="
 "\"_blank\">звяжіться зі мною</a>.</p>\n"
 "\n"
 "        <br>\n"
@@ -69,9 +72,9 @@ msgstr ""
 "        <p>Моє повне резюме знаходиться на <a rel=\"nofollow\" href=\"http://"
 "careers.stackoverflow.com/bmarchenko\" target=\"_blank\">Stackoverflow</a>.</"
 "p>\n"
-"        <p>Для більш детальної інформації про проекти над якими я процюю, будь ласка, відвідайте <a "
-"rel=\"nofollow\" href=\"https://github.com/bmarchenko\" target=\"_blank"
-"\">GitHub</a>.</p>\n"
+"        <p>Для більш детальної інформації про проекти над якими я процюю, "
+"будь ласка, відвідайте <a rel=\"nofollow\" href=\"https://github.com/"
+"bmarchenko\" target=\"_blank\">GitHub</a>.</p>\n"
 "        <p> <a rel=\"nofollow\" href=\"mailto:me@bmarchenko.com\" target="
 "\"_blank\">me@bmarchenko.com</a> </p>\n"
 "        <p> <a rel=\"nofollow\" href=\"https://www.facebook.com/bogdan."
@@ -91,96 +94,97 @@ msgstr "bmarchenko"
 msgid "Homepage of Bogdan Marchenko. Python and Django Developer in Ukraine."
 msgstr "Домашня сторінка Богдана Марченка. Розробника на Python і Django"
 
-#: templates/base.html:33
+#: templates/base.html:36
 msgid "Home"
-msgstr "Головна"
+msgstr " "
 
-#: templates/base.html:34 templates/technologies.html:5
+#: templates/base.html:37 templates/technologies.html:5
 msgid "Technologies"
-msgstr "Технології"
+msgstr "Tehnologiji"
 
-#: templates/base.html:35
+#: templates/base.html:38
 msgid "Blog"
-msgstr "Блог"
+msgstr "Zapysy"
 
-#: templates/base.html:36 templates/materials.html:5
+#: templates/base.html:39 templates/materials.html:5
 msgid "Materials"
-msgstr "Ресурси"
+msgstr "Zavantažyty"
 
-#: templates/base.html:37
+#: templates/base.html:40
 msgid "About"
-msgstr "Про мене"
+msgstr "Pro mene"
 
-#: templates/base.html:60
+#: templates/base.html:63
 #, fuzzy
 msgid "© 2013 Bogdan Marchenko."
-msgstr "Богдан Марченко"
+msgstr "© 2013 Bogdan Marćenko."
 
 #: templates/index.html:14
 msgid "WEB DEVELOPMENT:"
-msgstr "ВЕБ РОЗРОБКА:"
+msgstr "WEB ROZROBKA:"
 
 #: templates/index.html:18
 msgid ""
 "<span><a href=\"http://www.interiordesign.net/\" target=\"_blank\">Interior "
 "Design </a>Magazine website</span>"
 msgstr ""
-"<span>Веб-сайт журналу <a href=\"http://www.interiordesign.net/\" target=\"_blank\">Interior "
-"Design </a></span>"
+"<span>Web-sajt žurnalu <a href=\"http://www.interiordesign.net/\" target="
+"\"_blank\">Interior Design </a></span>"
 
 #: templates/index.html:19
 msgid ""
 "<span>A Telehealth Patient Consulting Service <a href=\"http://treatment.com/"
 "\" target=\"_blank\">Treatment. Patient Self-Care.</a></span>"
 msgstr ""
-"<span>Медичний консультаційний сервіс <a href=\"http://treatment.com/"
-"\" target=\"_blank\">Treatment. Patient Self-Care.</a></span>"
+"<span>Medyčnyj konsultacijnyj servis <a href=\"http://treatment.com/\" "
+"target=\"_blank\">Treatment. Patient Self-Care.</a></span>"
 
 #: templates/index.html:20
 msgid ""
 "<span><a href='http://www.telemedia.ua/' target=\"_blank\">Telemedia</a> "
 "website</span>"
 msgstr ""
-"<span>Веб-сайт <a href='http://www.telemedia.ua/' target=\"_blank\">Telemedia</a> "
-"</span>"
+"<span>Web-sajt <a href='http://www.telemedia.ua/' target=\"_blank"
+"\">Telemedia</a> </span>"
 
 #: templates/index.html:21
 msgid ""
 "<span><a href='http://www.telemedia.ua/' target=\"_blank\">Open Educational "
 "Resources Commons</a> website</span>"
 msgstr ""
-"<span>Веб-сайт <a href='http://www.telemedia.ua/' target=\"_blank\">Open Educational "
-"Resources Commons</a></span>"
+"<span>Web-sajt <a href='http://www.telemedia.ua/' target=\"_blank\">Open "
+"Educational Resources Commons</a></span>"
+
 #: templates/technologies.html:33
 #, fuzzy
 msgid "Other technologies"
-msgstr "Технології"
+msgstr "Inši tehnologiji"
 
 #: templates/zinnia/_entry_detail_base.html:18
 msgid "Written by"
-msgstr "Автор:"
+msgstr "Avtor:"
 
 #: templates/zinnia/_entry_detail_base.html:22
 #, python-format
 msgid "Show all %(author)s's entries"
-msgstr "Показати всі статті %(author)s"
+msgstr "Pokazaty vsi statti %(author)s"
 
 #: templates/zinnia/_entry_detail_base.html:24
 msgid "on"
-msgstr "Включено"
+msgstr "Vvimknuto"
 
 #: templates/zinnia/_entry_detail_base.html:26
 msgid "Written on"
-msgstr "Дата написання"
+msgstr "Data napysann'a"
 
 #: templates/zinnia/_entry_detail_base.html:32
 msgid "in"
-msgstr "в"
+msgstr "v"
 
 #: templates/zinnia/_entry_detail_base.html:35
 #, python-format
 msgid "Show all entries in %(category)s"
-msgstr "Показати всі записи в %(category)s"
+msgstr "Pokazaty vsi zapysy v %(category)s"
 
 #: templates/zinnia/_entry_detail_base.html:41
 msgid "Last update on"
@@ -193,11 +197,11 @@ msgstr ""
 
 #: templates/zinnia/_entry_detail_base.html:75
 msgid "Continue reading"
-msgstr "Продовжити"
+msgstr "Prodovžyty"
 
 #: templates/zinnia/_entry_detail_base.html:99 templates/zinnia/base.html:49
 msgid "Tags"
-msgstr "Теги"
+msgstr "Tegy"
 
 #: templates/zinnia/_entry_detail_base.html:102
 #, python-format
@@ -288,7 +292,7 @@ msgstr "Категорії"
 
 #: templates/zinnia/base.html:45
 msgid "Calendar"
-msgstr "Календар"
+msgstr "Kalendar"
 
 #: templates/zinnia/base.html:53
 msgid "Recent entries"
@@ -312,7 +316,7 @@ msgstr "Написати статтю"
 
 #: templates/zinnia/base.html:97 templates/zinnia/base.html.py:98
 msgid "Log out"
-msgstr "Вийти"
+msgstr "Vyjty"
 
 #: templates/zinnia/skeleton.html:15 templates/zinnia/skeleton.html.py:16
 #: templates/zinnia/skeleton.html:51 templates/zinnia/skeleton.html.py:52
