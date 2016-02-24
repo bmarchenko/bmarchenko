@@ -25,7 +25,7 @@ msgstr ""
 
 #: templates/about.html:8
 msgid "Some short info about myself"
-msgstr "Korotka informacija pro mene"
+msgstr "Trohy pro mene"
 
 #: templates/about.html:12
 msgid ""
