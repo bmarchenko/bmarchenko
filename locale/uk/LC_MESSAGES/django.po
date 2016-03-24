@@ -111,8 +111,8 @@ msgid "Materials"
 msgstr "Zavantažyty"
 
 #: templates/base.html:40
-msgid "About"
-msgstr "Pro mene"
+msgid "Team"
+msgstr "Komanda"
 
 #: templates/base.html:63
 #, fuzzy
