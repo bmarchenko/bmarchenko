@@ -4,3 +4,4 @@ local_settings.py
 tickets_db
 public/media/uploads/
 public/media/uploads/*
+.idea/

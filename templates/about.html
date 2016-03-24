@@ -4,27 +4,57 @@
 
 {% block container %}
 	<section id="splash">
-        <h2>{% trans 'Some short info about myself' %}</h2>
+        <h2>{% trans 'Some short info about our team' %}</h2>
     </section>
-        <img class="inline myphoto" title="Bogdan Marchenko" src="{{ STATIC_URL }}img/bmarchenko.jpg" alt="Bogdan Marchenko" width=250px/>
-    <article>
-        {% blocktrans %}
-            <p>My name is Bogdan Marchenko. I am a Python developer in Ukraine and love to work with <a rel="nofollow" href="https://www.djangoproject.com/‎ target="_blank"">Django Framework.</a></p>
-            <p>I am always open to new people, projects and ideas.</p>
-            <p>If you want to <b>learn/improve you Python Programming</b> skills, come to <a rel="nofollow" href="http://en.wikipedia.org/wiki/Ukraine" target="_blank">Ukraine</a> or <b>travel</b> with me don't hesitate and <a rel="nofollow" href="mailto:me@bmarchenko.com" target="_blank">contact me</a>.</p>
+    <table class="table">
+        <tr>
+            <td>
+                <img class="inline myphoto" title="Bogdan Marchenko" src="{{ STATIC_URL }}img/bmarchenko.jpg" alt="Bogdan Marchenko" width=250px/>
+                <article>
+                {% blocktrans %}
+                    <p>My name is Bogdan Marchenko. I am a Python developer in Ukraine and love to work with <a rel="nofollow" href="https://www.djangoproject.com/"‎ target="_blank">Django Framework.</a></p>
+                    <p>I am always open to new people, projects and ideas.</p>
+                    <p>If you want to <b>learn/improve you Python Programming</b> skills, come to <a rel="nofollow" href="http://en.wikipedia.org/wiki/Ukraine" target="_blank">Ukraine</a> or <b>travel</b> with me don't hesitate and <a rel="nofollow" href="mailto:me@bmarchenko.com" target="_blank">contact me.</a></p>
+                    <p> <a rel="nofollow" href="https://www.facebook.com/bogdan.marchenko.18" target="_blank">www.facebook.com/bogdan.marchenko.18</a> </p>
+                </article>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img class="inline myphoto" title="Peter Morhun" src="{{ STATIC_URL }}img/pmorhun.jpg" alt="Peter Morhun" width=250px/>
+                <article>
+                    <p>Hi, my name is Peter Morhun and I'm a Python/Django developer. I live in Ukraine.</p>
+                    <p>My job is to create and support various web projects. I'm always ready for cooperation and open to communication</p>
+                    <p>I love to learn new stuff, new technologies, also to  travel, make videos. </p>
+                    <p><a rel="nofollow" href="https://www.facebook.com/petermorhun" target="_blank">www.facebook.com/petermorhun</a> </p>
+                </article>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <article>
+                    <h3>Contacts:</h3>
+                    <p> <a rel="nofollow" href="mailto:me@bmarchenko.com" target="_blank">me@bmarchenko.com</a> </p>
+                    <p>tel: +380637304871</p>
+                    <p>For more information about my personal projects please, visit <a rel="nofollow" href="https://github.com/bmarchenko" target="_blank">GitHub</a>.</p>
+                    <p>Full resume can be found on <a rel="nofollow" href="http://careers.stackoverflow.com/bmarchenko" target="_blank">Stackoverflow</a>.</p>
+                    <p> <a rel="nofollow" href="https://www.odesk.com/users/~01692e8d9e2829ddf3" target="_blank">www.odesk.com/users/~01692e8d9e2829ddf3</a> </p>
+                </article>
+                {% endblocktrans %}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>{% trans "Visited countries:" %}</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="mapdiv" style="width: 1000px; height: 450px;"></div>
+            </td>
+        </tr>
+    </table>
 
-            <br>
-            <h3 class="muted">Contacts:</h3>
-            <p>My full resume can be found on <a rel="nofollow" href="http://careers.stackoverflow.com/bmarchenko" target="_blank">Stackoverflow</a>.</p>
-            <p>For more information about my personal projects please, visit <a rel="nofollow" href="https://github.com/bmarchenko" target="_blank">GitHub</a>.</p>
-            <p> <a rel="nofollow" href="mailto:me@bmarchenko.com" target="_blank">me@bmarchenko.com</a> </p>
-            <p> <a rel="nofollow" href="https://www.facebook.com/bogdan.marchenko.18" target="_blank">www.facebook.com/bogdan.marchenko.18</a> </p>
-            <p> <a rel="nofollow" href="https://www.odesk.com/users/~01692e8d9e2829ddf3" target="_blank">www.odesk.com/users/~01692e8d9e2829ddf3</a> </p>
-        {% endblocktrans %}
-        <h3>{% trans "Visited countries:" %}</h3>
-
-    </article>
-<div id="mapdiv" style="width: 1000px; height: 450px;"></div>
 {% endblock %}
 {% block script %}
 <script src="http://cdn.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>

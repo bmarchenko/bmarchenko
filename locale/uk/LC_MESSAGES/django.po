@@ -24,8 +24,8 @@ msgid "Content"
 msgstr ""
 
 #: templates/about.html:8
-msgid "Some short info about myself"
-msgstr "Trohy pro mene"
+msgid "Some short info about our team"
+msgstr "Trohy pro nas"
 
 #: templates/about.html:12
 msgid ""

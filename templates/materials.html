@@ -2,15 +2,22 @@
 {% load i18n %}
 
 {% block container %}
-  <h2>{% trans "Materials" %}:</h2>
-  <br>
-  <ul>
-    <li><a rel="nofollow" href="http://sist.sysu.edu.cn/~isslxm/DSA/textbook/Skiena.-.TheAlgorithmDesignManual.pdf" target="_blank">The Algorithm Design Manual.</a>  Steve S. Skiena</li>
-    <li><a rel="nofollow"href="http://besplatnyeknigi.ru/files/new/atlant_raspravil_plechi_kniga___1/atlant_raspravil_plechi_kniga___1.pdf.zip" target="_blank">Атлант расправил плечи.</a>  Айн Рэнд</li>
-    <li><a rel="nofollow" href="http://www.alperkimya.com.tr/licomas/app/files/modules/dosyalar/dosyalar_file/The%20Pragmatic%20Programmer,%20From%20Journeyman%20To%20Master.pdf" target="_blank">The Pragmatic Programmer.</a>  Andrew Hunt, David Thomas</li>
-    <li><a rel="nofollow" href="http://www.puyb.net/download/djangobook/res.pdf" target="_blank">Djangobook.</a> </li>
-    <li><a rel="nofollow" href="http://blakemasters.com/peter-thiels-cs183-startup" target="_blank">Notes Essays—Peter Thiel’s CS183: Startup—Stanford, Spring 2012</a> </li>
-    <li><a rel="nofollow" href="https://class.coursera.org/startup-001/class/index" target="_blank">Startup Engineering Course</a> by Balaji S. Srinivasan, Vijay S. Pande  </li>
-  </ul>
+    <h2>{% trans "Materials" %}:</h2>
+
+    <div class="materials-img">
+        <img class="inline" title="Materials" src="{{ STATIC_URL }}img/materials.png" alt="Materials" width="130px"/>
+    </div>
+
+    <div class="materials-decription">
+        <ul>
+            <li><a rel="nofollow" href="http://www.alperkimya.com.tr/licomas/app/files/modules/dosyalar/dosyalar_file/The%20Pragmatic%20Programmer,%20From%20Journeyman%20To%20Master.pdf" target="_blank">The Pragmatic Programmer.</a>  Andrew Hunt, David Thomas</li>
+            <li><a rel="nofollow" href="http://www.puyb.net/download/djangobook/res.pdf" target="_blank">Djangobook.</a> </li>
+            <li><a rel="nofollow" href="http://sist.sysu.edu.cn/~isslxm/DSA/textbook/Skiena.-.TheAlgorithmDesignManual.pdf" target="_blank">The Algorithm Design Manual.</a>  Steve S. Skiena</li>
+            <li><a rel="nofollow"href="http://besplatnyeknigi.ru/files/new/atlant_raspravil_plechi_kniga___1/atlant_raspravil_plechi_kniga___1.pdf.zip" target="_blank">Атлант расправил плечи.</a>  Айн Рэнд</li>
+            <li><a rel="nofollow" href="http://blakemasters.com/peter-thiels-cs183-startup" target="_blank">Notes Essays—Peter Thiel’s CS183: Startup—Stanford, Spring 2012</a> </li>
+            <li><a rel="nofollow" href="https://class.coursera.org/startup-001/class/index" target="_blank">Startup Engineering Course</a> by Balaji S. Srinivasan, Vijay S. Pande  </li>
+            <li><a rel="nofollow" href="https://git-scm.com/book/en/v2" target="_blank">Pro Git book</a></li>
+        </ul>
+    </div>
 {% endblock %}
 

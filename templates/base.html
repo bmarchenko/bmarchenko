@@ -23,8 +23,8 @@
   </head>
   <body class="{% block body_class %}{% endblock %}">
 
-<a href="http://stfalcon.github.io/euromaidan/" class="em-ribbon" style="position: fixed; left:0; top:0; width: 90px; height: 90px; background: url('http://stfalcon.github.io/euromaidan/img/em-ribbon.png'); z-index: 2013; border: 0;" title="Розмісти стрічку з символікою України і ЄС на своєму сайті!" target="_blank"></a>
-    </script>
+    <a href="http://stfalcon.github.io/euromaidan/" class="em-ribbon" style="position: fixed; left:0; top:0; width: 90px; height: 90px; background: url('http://stfalcon.github.io/euromaidan/img/em-ribbon.png'); z-index: 2013; border: 0;" title="Розмісти стрічку з символікою України і ЄС на своєму сайті!" target="_blank"></a>
+
     <div id="wrap">
     <!-- Fixed navbar -->
       <div class="navbar navbar-fixed-top">
@@ -35,7 +35,7 @@
               <ul class="nav">
                 <li class="page_item"><a href="{% url 'index' %}">{% trans "Home" %}</a></li>
                 <li class="page_item"><a href="{% url 'technologies' %}">{% trans "Technologies" %}</a></li>
-                <li class="page_item"><a href="{% url 'zinnia_entry_archive_index' %}">{% trans "Blog" %}</a></li>
+                <!--li class="page_item"><a href="{% url 'zinnia_entry_archive_index' %}">{% trans "Blog" %}</a></li-->
                 <li class="page_item"><a href="{% url 'materials' %}">{% trans "Materials" %}</a></li>
                 <li class="page_item"><a href="{% url 'about' %}">{% trans "About" %}</a></li>
                 <li>
@@ -94,5 +94,6 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    </script>
   </body>
 </html>

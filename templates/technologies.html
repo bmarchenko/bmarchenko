@@ -30,14 +30,22 @@
         <h3>Google AppEngine</h3><a rel="nofollow" href="https://developers.google.com/appengine/" target="_blank">google.com/appengine/</a> <p>App Engine is a complete development stack that uses familiar technologies to build and host applications on the same infrastructure used at Google..</p>
     </div>
     <div style="clear:both"></div>
-    <h3 class="center">{% trans "Other technologies" %}:</h3>
-<ul class="other-technologies">
-<li>Solr</li>
-<li>ExtJs</li>
-<li>JavaScript</li>
-<li>Ajax</li>
-<li>JQuery</li>
-</ul>
+    <div class="technology-img">
+        <img class="inline" title="Other technologies" src="{{ STATIC_URL }}img/other_tech.png" alt="Other technologies" width="200px"/>
+    </div>
+
+    <div class="technology-description">
+        <h3>{% trans "Other technologies" %}</h3>
+        <ul class="other-technologies">
+            <li><a rel="nofollow" target="_blank" href="http://jquery.com/">JQuery</a></li>
+            <li><a rel="nofollow" target="_blank" href="http://lucene.apache.org/solr/">Solr</a></li>
+            <li><a rel="nofollow" target="_blank" href="https://www.sencha.com/products/extjs/#overview">ExtJs</a></li>
+            <li><a rel="nofollow" target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></li>
+            <li><a rel="nofollow" target="_blank" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a></li>
+            <li><a rel="nofollow" target="_blank" href="https://en.wikipedia.org/wiki/Ajax">Ajax</a></li>
+            <li><a rel="nofollow" target="_blank" href="http://www.postgresql.org/">PostgreSQL</a></li>
+        </ul>
+    </div>
 
 {% endblock %}
 

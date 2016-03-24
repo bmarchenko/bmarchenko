@@ -120,7 +120,7 @@ article {
   display: inline;
   float: right;
   font-size: 1.2em;
-  margin-bottom: 4em;
+  margin-bottom: 1em;
   margin-right: 0;
   width: 66.1017%; }
 
@@ -134,7 +134,9 @@ article {
 
 .technology-img {
   float: left;
-  width: 200px; }
+  width: 200px;
+  padding-right: 25px;
+  padding-bottom: 30px; }
 
 .technology-decription {
   float: left;
@@ -142,14 +144,29 @@ article {
 
 .other-technologies {
   margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  /*text-align: center;*/ }
 
 .other-technologies li {
   display: inline-block;
   color: #0088CC;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  padding-right: 105px; }
+  padding-right: 30px; }
+
+.materials-img {
+  float: left;
+  width: 200px;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  padding-left: 40px; }
+
+.materials-decription {
+  float: left;
+  width: 600px;
+  font-size: 115%;
+  margin-top: 30px; }
 
 .center {
   text-align: center; }
@@ -164,7 +181,8 @@ a.uk {
 
 .myphoto {
   border-radius: 10px;
-  float: left; }
+  float: left;
+  margin-bottom: 25px; }
 
 #splash {
   margin-bottom: 28px; }
