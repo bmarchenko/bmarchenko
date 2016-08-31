@@ -1,9 +1,9 @@
 BeautifulSoup==3.2.1
-Django==1.5.1
-PIL==1.1.7
+Django==1.7
+pillow
 Pygments==1.6
 South==0.8.2
-django-blog-zinnia==0.12.3
+django-blog-zinnia==0.15
 django-extensions==1.2.5
 django-mptt==0.5.5
 django-pygments==0.1
